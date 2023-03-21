@@ -1,0 +1,32 @@
+$color-text-primary: #CED7E6;
+$color-text-secondary: #D3D3E2;
+$color-text-tertiary: #7B7BE3;
+$color-text-functional-light: #A4F1D4;
+$color-text-functional-dark: #54C198;
+$color-text-display: #2C2CAB;
+$color-text-title-functional: #D8FFF0;
+
+$color-bg-header: #080C30;
+$color-bg-main: #050513;
+$color-bg-label: #12122B;
+$color-bg-card: #0B1533;
+$color-bg-modal: $color-bg-header;
+
+$color-gradient-separator: linear-gradient(90deg, $color-text-functional-light 0%, $color-text-functional-dark 100%);
+$color-gradient-footer: linear-gradient(0.17deg, $color-bg-header 0.15%, $color-bg-main 99.85%);
+
+$font-xxl: calc(3.25rem + 1vw);
+$font-xl: calc(2.75rem + 0.5vw);
+$font-lg: 1.5rem;
+$font-md: 1.25rem;
+$font-sm: 1rem;
+
+$font-title-modal: $font-xl - 0.5rem;
+$font-subtitle-modal: $font-lg + 0.25rem;
+$font-text-modal: 14px;
+
+$font-text-tooltip: 12px;
+
+$gutter-x-card: 20px + 10px; //Transformar 10Px para Vw
+$gutter-y-card: 10px + 10px; //Transformar 10Px para Vw
+$gutter-grid: 20px + 10px; //Transformar 10Px para Vw
