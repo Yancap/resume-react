@@ -1,6 +1,7 @@
 $color-text-primary: #CED7E6;
 $color-text-secondary: #D3D3E2;
 $color-text-tertiary: #7B7BE3;
+$color-text-modal: #9797B2;
 $color-text-functional-light: #A4F1D4;
 $color-text-functional-dark: #54C198;
 $color-text-display: #2C2CAB;
@@ -21,11 +22,14 @@ $font-lg: 1.5rem;
 $font-md: 1.25rem;
 $font-sm: 1rem;
 
-$font-title-modal: $font-xl - 0.5rem;
-$font-subtitle-modal: $font-lg + 0.25rem;
+$font-title-modal: calc($font-xl - 0.5rem);
+$font-subtitle-modal: calc($font-lg + 0.25rem);
 $font-text-modal: 14px;
-
 $font-text-tooltip: 12px;
+
+$font-type-title: 'Tinos', Georgia, 'Times New Roman', Times, serif;
+$font-type-text: 'Montserrat', Helvetica, sans-serif;
+$font-type-functional: 'Poppins', 'Montserrat', Helvetica, sans-serif;
 
 $gutter-x-card: 20px + 10px; //Transformar 10Px para Vw
 $gutter-y-card: 10px + 10px; //Transformar 10Px para Vw
