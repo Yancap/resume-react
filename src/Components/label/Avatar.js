@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Avatar = () => {
   return (
-    <div>Avatar</div>
+    <div className='avatar'>Avatar</div>
   )
 }

@@ -27,10 +27,12 @@ $font-subtitle-modal: calc($font-lg + 0.25rem);
 $font-text-modal: 14px;
 $font-text-tooltip: 12px;
 
-$font-type-title: 'Tinos', Georgia, 'Times New Roman', Times, serif;
-$font-type-text: 'Montserrat', Helvetica, sans-serif;
-$font-type-functional: 'Poppins', 'Montserrat', Helvetica, sans-serif;
+$font-family-title: 'Tinos', Georgia, 'Times New Roman', Times, serif;
+$font-family-text: 'Montserrat', Helvetica, sans-serif;
+$font-family-functional: 'Poppins', Helvetica, sans-serif;
 
 $gutter-x-card: 20px + 10px; //Transformar 10Px para Vw
 $gutter-y-card: 10px + 10px; //Transformar 10Px para Vw
 $gutter-grid: 20px + 10px; //Transformar 10Px para Vw
+
+$border-radius: 5px;
