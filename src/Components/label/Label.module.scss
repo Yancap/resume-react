@@ -58,3 +58,17 @@
 .card{
    width: calc((13rem + 4vw) - 30px);
 }
+
+.button{
+    margin: 20px;
+    $height: 50px;
+    background-color: $color-bg-main;
+    border: 0;
+    height: $height;
+    width: 100%;
+    border-radius: calc($height /2);
+    color: $color-text-functional-dark;
+    font-family: $font-family-functional;
+    font-weight: 700;
+    font-size: $font-md;
+}

@@ -1,7 +1,6 @@
 import React from 'react'
 import { CardConnections } from '../Common/CardConnections'
 import { Avatar } from './Avatar'
-import { Download } from './Download'
 import { ReactComponent as Instagram} from '../../Assets/redes/instagram.svg'
 import { ReactComponent as Github} from '../../Assets/redes/github.svg'
 import { ReactComponent as Linkedin} from '../../Assets/redes/linkedin.svg'
@@ -37,9 +36,7 @@ export const Label = () => {
                 ]}
             />
         </div>
-        <div>
-            <Download />
-        </div>
+        <button className={styles.button}>Download CV</button>
     </div>
   )
 }
