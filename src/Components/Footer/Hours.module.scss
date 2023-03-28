@@ -4,7 +4,8 @@
 .hours{
     @include background-container-select;
     height: 100%;
-    width: 100%;
+    width: 75px;
+    min-width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
