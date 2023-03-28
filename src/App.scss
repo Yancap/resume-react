@@ -1,11 +1,17 @@
+@import './Components/Sass/variables.scss';
+
 *{
     margin: 0;
     padding: 0;
     color: white;
 }
 
-html{
-    background-color: $color-bg-main ;
+body{
+    background: $bg-default;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
 a{

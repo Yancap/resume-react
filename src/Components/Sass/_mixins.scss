@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+@mixin background-default {
+    background: $bg-container-primary;
+    border-width: 0px 2px 2px 0px;
+    border-style: solid;
+    border-color: #232033;
+    box-shadow: -2px 0px 0px #FFFFFF, 0px -2px 0px #FFFFFF;
+}
