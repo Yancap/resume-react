@@ -1,0 +1,18 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.hours{
+    @include background-container-select;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 16px;
+        color: $color-primary;
+        margin: 2px 4px;
+    }
+}

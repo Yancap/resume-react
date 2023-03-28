@@ -1,0 +1,12 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.menu{
+    @include background-container;
+    height: 50vh;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 5vh;
+    padding: 2px 4px;
+}

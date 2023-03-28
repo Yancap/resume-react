@@ -1,0 +1,26 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.button{
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    padding: 2px 4px;
+    align-items: center;
+    max-width: 121px;
+    @include background-container;
+    div{
+        display: flex;
+        align-items: center;
+    }
+    span{
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 16px;
+        color: $color-primary;
+        margin: 2px 4px;
+    }
+}
+.button:active, .button:disabled{
+    @include background-container-select;
+}

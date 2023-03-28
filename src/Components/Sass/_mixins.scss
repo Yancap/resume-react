@@ -7,3 +7,21 @@
     border-color: #232033;
     box-shadow: -2px 0px 0px #FFFFFF, 0px -2px 0px #FFFFFF;
 }
+
+@mixin background-container {
+    background: $bg-container-primary;
+    border-radius: 1px;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #232033;
+    box-shadow: -1px 0px 0px #FFFFFF, 0px -1px 0px #FFFFFF;
+}
+
+@mixin background-container-select{
+    background: $bg-container-secondary;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #DAD8EA;
+    box-shadow: -1px -1px 0px #232033, 0px -1px 0px #232033;
+    border-radius: 1px;
+}
