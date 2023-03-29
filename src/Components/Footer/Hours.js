@@ -15,27 +15,6 @@ export const Hours = () => {
     
   },[setHours, setMinutes])
 
-//   if (seconds && hours && minutes) {
-//     setInterval(()=>{
-//         console.log(seconds);
-//         if (seconds < 60) {
-//             seconds++
-//         }
-//         else if ( seconds === 60 && minutes < 60) {
-//             console.log(seconds);
-//             seconds = 0
-//             setMinutes(minutes + 1)
-//         } else if (minutes === 60 && hours < 24) {
-//             setMinutes(0)
-//             seconds = 0
-//             setHours(hours + 1)
-//         } else{
-//             setMinutes(0)
-//             seconds = 0
-//             setHours(hours)
-//         }
-//     }, 1000)
-//   }
   return (
     <div className={styles.hours}>
         <span>

@@ -8,7 +8,7 @@ export const Footer = () => {
   const [active, setActive] = React.useState(false)
   function handleClick({currentTarget}){
     setActive(!active)
-    console.log(currentTarget.toggleAttribute('disabled'));
+    currentTarget.toggleAttribute('disabled')
   }
   return (
     <footer className={styles.footer}>
