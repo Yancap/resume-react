@@ -1,12 +1,16 @@
 import './App.scss';
+import { WindowStorage } from './Components/Context/WindowContext';
 import { Footer } from './Components/Footer/Footer.js'
 import { Main } from './Components/Main.js'
 
 function App() {
   return (
     <div className="App">
-      <Main />
-      <Footer />
+      <WindowStorage>
+        <Main />
+        <Footer />
+      </WindowStorage>
+
     </div>
   );
 }

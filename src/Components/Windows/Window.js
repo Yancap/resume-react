@@ -1,9 +1,10 @@
 import React from 'react'
 import { Button } from '../Common/Button'
+import styles from './Window.module.scss'
 
-export const Window = ({icon, path, childen}) => {
+export const Window = ({icon, path, childen, ...props}) => {
   return (
-    <div>
+    <div className={styles.window} {...props} style={{display: 'none'}}>
         <header>
             <div>
                 {icon}

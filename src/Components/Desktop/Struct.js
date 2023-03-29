@@ -5,7 +5,6 @@ import './Desktop.scss'
 export const Struct = ({icon, text}) => {
     function handleClick({currentTarget}){
         currentTarget.toggleAttribute('active')
-        console.log(12);
     }
   return (
     <div className={styles.program} onClick={handleClick}>
