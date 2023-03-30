@@ -7,7 +7,7 @@ export const Struct = ({icon, text, target}) => {
         currentTarget.toggleAttribute('active')
     }
   return (
-    <div className={styles.program} onClick={handleClick} data-desktop={target}>
+    <div className={styles.program} onDoubleClick={handleClick} data-desktop={target}>
       <div className={styles.icon}>
         <img src={icon} />
       </div>

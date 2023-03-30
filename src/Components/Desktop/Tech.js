@@ -5,7 +5,7 @@ import icon from '../../Assets/desktop/tech.png'
 
 export const Tech = ({id,onClick, ...props}) => {
   return (
-    <div id={id} onClick={onClick} {...props}>
+    <div id={id} onDoubleClick={onClick} {...props}>
       <Struct text='Tecnologias' icon={icon} target={id}/>
     </div>
   )

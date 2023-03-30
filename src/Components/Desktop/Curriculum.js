@@ -5,7 +5,7 @@ import icon from '../../Assets/desktop/curriculo.png'
 
 export const Curriculum = ({id, onClick, ...props}) => {
   return (
-    <div id={id} onClick={onClick} {...props}>
+    <div id={id} onDoubleClick={onClick} {...props}>
       <Struct text='Curriculo' icon={icon} target={id}/>
     </div>
   )

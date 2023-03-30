@@ -5,7 +5,7 @@ import icon from '../../Assets/desktop/about.png'
 
 export const About = ({id, onClick, ...props}) => {
   return (
-    <div id={id} onClick={onClick} {...props}>
+    <div id={id} onDoubleClick={onClick} {...props}>
       <Struct text='Sobre mim' icon={icon} target={id}/>
     </div>
   )

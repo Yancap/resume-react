@@ -5,7 +5,7 @@ import icon from '../../Assets/desktop/avatar.png'
 
 export const SoftSkills = ({id,onClick, ...props}) => {
   return (
-    <div id={id} onClick={onClick} {...props}>
+    <div id={id} onDoubleClick={onClick} {...props}>
       <Struct text='Soft skills' icon={icon} target={id}/>
     </div>
   )
