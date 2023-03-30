@@ -1,10 +1,12 @@
 import React from 'react'
 import { Button } from '../Common/Button'
+import { WindowContext } from '../Context/WindowContext'
 import styles from './Window.module.scss'
 
-export const Window = ({icon, path, childen, ...props}) => {
+export const Window = ({icon, path, childen, target, ...props}) => {
+    const { handleRemove, handleMinimize } = React.useContext(WindowContext)
   return (
-    <div className={styles.window} {...props} style={{display: 'none'}}>
+    <div className={styles.window} {...props} style={{display: 'none'}} data-target={target}>
         <header>
             <div>
                 {icon}
@@ -13,9 +15,9 @@ export const Window = ({icon, path, childen, ...props}) => {
                 {path}
             </div>
             <div>
-                <Button icon='_'/>
-                <Button icon='O'/>
-                <Button icon='X'/>
+                <Button text='_' onClick={handleMinimize} data-point={target}/>
+                <Button text='O' data-point={target}/>
+                <Button text='X' onClick={handleRemove} data-point={target}/>
             </div>
         </header>
         {childen}

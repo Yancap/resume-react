@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './Button.module.scss'
 
-export const Button = ({content, icon, onClick}) => {
+export const Button = ({text, icon, onClick, ...props}) => {
   return (
-    <button className={styles.button} onClick={onClick}>
-        {icon && <div>{icon}</div>}
-        {content && <div><span>{content}</span></div>}
+    <button className={styles.button} onClick={onClick} {...props}>
+        {icon && <div className={styles.icon}><img src={icon} alt="" srcset="" /></div>}
+        {text && <div><span>{text}</span></div>}
     </button>
   )
 }

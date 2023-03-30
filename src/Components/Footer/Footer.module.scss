@@ -23,5 +23,15 @@
 .containerApps{
     width: 95%;
     display: flex;
+    
+}
+.start{
+    margin-right: 8px;
 }
 
+.tabs{
+    display: flex;
+    button{
+        margin-right: 4px;
+    }
+}

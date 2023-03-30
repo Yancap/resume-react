@@ -1,10 +1,11 @@
 import React from 'react'
+import styles from './Tab.module.scss'
 
 export const Tab = ({text, icon, target}) => {
   return (
-    <div data-point={target}>
+    <div className={styles.tab} data-point={target}>
         
-        <div>
+        <div className={styles.icon}>
             <img src={icon} alt="" srcset="" />
         </div>
         <div>

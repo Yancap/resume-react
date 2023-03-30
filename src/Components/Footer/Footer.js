@@ -1,20 +1,23 @@
 import React from 'react'
 import { Button } from '../Common/Button'
 import { WindowContext, WindowStorage } from '../Context/WindowContext'
-import { useOpen } from '../Hooks/useOpen'
 import styles from './Footer.module.scss'
 import { Hours } from './Hours'
 import { Menu } from './Menu'
-import { Tab } from './Tab'
 
 export const Footer = () => {
   const [active, setActive] = React.useState(false)
-  const {tabs, handleClick} = React.useContext(WindowContext)
+  const {tabs, handleOpen} = React.useContext(WindowContext)
   const keys = tabs && Object.keys(tabs).map(key =>(
-    <Tab key={key} icon={tabs[key].icon} text={tabs[key].text} target={tabs[key].icon}/>
+    <Button key={key} icon={tabs[key].icon} onClick={handleOpen} text={tabs[key].text} data-point={tabs[key].target} />
   ))
-  console.log(tabs);
-  console.log(keys);
+  React.useEffect(()=>{
+    tabs && Object.keys(tabs).forEach(key =>{
+      document.querySelector(`#tabs button[data-point='${tabs[key].target}']`).setAttribute('disabled', 'disabled')
+    })
+  }, [tabs])
+  
+  
   function handleButton({currentTarget}){
     setActive(!active)
     currentTarget.toggleAttribute('disabled')
@@ -25,11 +28,11 @@ export const Footer = () => {
             <div className={styles.containerApps}>
               <div className={styles.start}>
                 {active && <Menu/>}
-                <Button content='Start' icon='X' onClick={handleButton}/>
+                <Button text='Start' icon='X' onClick={handleButton}/>
               </div>
-              <div>
+              <div className={styles.tabs} id='tabs'>
                 
-                {tabs && <>{keys[0]}</>}
+                {tabs && <>{keys.map(element => element)}</>}
                 
               </div>
             </div>

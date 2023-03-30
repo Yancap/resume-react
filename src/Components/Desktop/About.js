@@ -3,10 +3,10 @@ import styles from './Common.module.scss'
 import { Struct } from './Struct'
 import icon from '../../Assets/desktop/about.png'
 
-export const About = ({id}) => {
+export const About = ({id, onClick, ...props}) => {
   return (
-    <div id={id}>
-      <Struct text='Sobre mim' icon={icon}/>
+    <div id={id} onClick={onClick} {...props}>
+      <Struct text='Sobre mim' icon={icon} target={id}/>
     </div>
   )
 }

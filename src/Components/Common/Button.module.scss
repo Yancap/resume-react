@@ -7,7 +7,7 @@
     display: flex;
     padding: 2px 4px;
     align-items: center;
-    max-width: 121px;
+    
     @include background-container;
     div{
         display: flex;
@@ -16,11 +16,23 @@
     span{
         font-family: 'Montserrat';
         font-weight: 600;
-        font-size: 16px;
+        font-size: 14px;
         color: $color-primary;
         margin: 2px 4px;
+        
+    }
+    
+}
+
+.icon{
+    height: 100%;
+    width: 20px;
+    img{
+        max-width: 100%;
+        height: auto;
     }
 }
+
 .button:active, .button:disabled{
     @include background-container-select;
 }
