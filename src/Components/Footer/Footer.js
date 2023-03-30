@@ -13,7 +13,12 @@ export const Footer = () => {
   ))
   React.useEffect(()=>{
     tabs && Object.keys(tabs).forEach(key =>{
-      document.querySelector(`#tabs button[data-point='${tabs[key].target}']`).setAttribute('disabled', 'disabled')
+      if (document.querySelector(`div[data-target='${tabs[key].target}']`).style.visibility === 'hidden') {
+        document.querySelector(`#tabs button[data-point='${tabs[key].target}']`).removeAttribute('disabled', 'disabled')
+      } else {
+        document.querySelector(`#tabs button[data-point='${tabs[key].target}']`).setAttribute('disabled', 'disabled')
+      }
+      
     })
   }, [tabs])
   
