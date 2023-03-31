@@ -9,4 +9,65 @@
     height: 300px;
     width: 500px;
     z-index: $z-index-window;
+    padding: 4px;
+}
+
+.header{
+    box-sizing: border-box;
+    height: 22px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    padding: 2px;
+}
+
+.containerBtn{
+    display: flex;
+    align-items: center;
+    height: 18px;
+    button{
+        height: 100%;
+        box-sizing: border-box;
+        border-radius: 0.5px;
+        box-shadow: none;
+        width: 20px;
+        margin-right: 2px;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(1){
+            svg{
+                
+            align-self: flex-end;
+            }
+        }
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.containerSpan{
+    display: flex;
+    height: 80%;
+    align-items: center;
+    div{
+        height: 100%;
+        margin-right: 4px;
+        margin-left: 2px;
+    }
+    span{
+    font-family: 'VT323';
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.035em;
+    color: $color-secondary ;
+    }
+    img{
+        height: 100%;
+        width: auto;
+    }
 }

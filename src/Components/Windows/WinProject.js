@@ -1,13 +1,14 @@
 import React from 'react'
 import { Window } from './Window'
 import styles from './WinProject.module.scss'
+import icon from '../../Assets/desktop/folder.png'
 
 export const WinProject = () => {
   return (
     
-      <Window target='my-projects'>
+      <Window icon={icon} path='Meus Projetos' target='my-projects'>
         <div className={styles.win}>
-          Window
+          Project
         </div>
       </Window>
     

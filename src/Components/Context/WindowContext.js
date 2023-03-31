@@ -28,7 +28,10 @@ export const WindowStorage = ({children}) => {
                 }) 
             }
             
-        }    
+        } else{
+            element.style.visibility = 'visible'
+            document.querySelector(`#tabs button[data-point='${event.currentTarget.dataset.point}']`).setAttribute('disabled', 'disabled')
+        }   
     }
     function handleRemove(event) {
         let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}'`)
@@ -51,7 +54,6 @@ export const WindowStorage = ({children}) => {
             
     }
     function handleOpen(event) {
-        console.log('asd');
         if(event.currentTarget.dataset.point){
             let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}']`)
             element.style.visibility = 'visible'

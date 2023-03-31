@@ -3,9 +3,11 @@ import React from 'react'
 export class EventMove{
     click = {x:0,y:0}
     start = {x:null,y:null}
+    zindex = 40
     handleDown(event){
         const element = event.currentTarget
         element.addEventListener('mousemove', this.handleMove)
+        element.style.zIndex = 45
         //element.addEventListener('mouseout', this.handleUp)
     }
     handleUp(event){
@@ -14,6 +16,7 @@ export class EventMove{
         this.start.x = null
         this.start.y = null
         const element = event.currentTarget
+        SelectWindow.handleClick(element)
         element.removeEventListener('mousemove', this.handleMove)
         //element.removeEventListener('mouseout', this.handleUp)
     }
@@ -23,8 +26,8 @@ export class EventMove{
             this.start.x = event.offsetX
             this.start.y = event.offsetY
         }
-        this.click.x = element.getBoundingClientRect().left + (event.clientX - element.getBoundingClientRect().left - (this.start.x - 1))
-        this.click.y = element.getBoundingClientRect().top + (event.clientY - element.getBoundingClientRect().top - (this.start.y - 1))
+        this.click.x =  (event.clientX  - (this.start.x - (this.start.x > element.getBoundingClientRect().width / 2 ? 15 : 0.001)))
+        this.click.y =  (event.clientY -  (this.start.y - (this.start.y > element.getBoundingClientRect().height / 2 ? 15 : 0.001)))
         element.style.left =  this.click.x + "px"
         element.style.top = this.click.y + "px"
     }
@@ -35,5 +38,13 @@ export class EventMove{
     }
     init(){
         this.bindEvents()
+    }
+}
+
+export class SelectWindow{
+    static z_index = 35
+    static handleClick(element){
+        this.z_index++
+        element.style.zIndex = this.z_index
     }
 }

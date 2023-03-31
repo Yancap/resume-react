@@ -1,13 +1,14 @@
 import React from 'react'
 import { Window } from './Window'
 import styles from './WinProject.module.scss'
+import icon from '../../Assets/desktop/contact.png'
 
 export const WinContacts = () => {
   return (
     
-      <Window target='contact'>
+      <Window icon={icon} path='Contatos' target='contact'>
         <div >
-          Window
+          Contact
         </div>
       </Window>
     
