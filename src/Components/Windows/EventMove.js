@@ -2,30 +2,33 @@ import React from 'react'
 
 export class EventMove{
     click = {x:0,y:0}
+    start = {x:null,y:null}
     handleDown(event){
         const element = event.currentTarget
         element.addEventListener('mousemove', this.handleMove)
-        this.click.x = event.clientX
-        this.click.y = event.clientY
-        console.log(event);
+        element.addEventListener('mouseout', this.handleUp)
     }
     handleUp(event){
         this.click.x = 0
         this.click.y = 0
+        this.start.x = null
+        this.start.y = null
         const element = event.currentTarget
         element.removeEventListener('mousemove', this.handleMove)
+        element.removeEventListener('mouseout', this.handleUp)
     }
     handleMove(event){
         const element = event.currentTarget
-        let pointerX = this.click.x + (event.offsetX - element.getBoundingClientRect().width) 
-        let pointerY = this.click.y  + (event.offsetY - element.getBoundingClientRect().height) 
-        // this.position.movement.x = (this.position.start.x - pointerX) 
-        // this.position.movement.y = (this.position.start.y - pointerY) 
-        console.log(pointerX);
-        console.log(event.offsetX)
-        console.log(element.getBoundingClientRect().width);
-        element.style.left =  pointerX + "px"
-        element.style.top = pointerY + "px"
+        if (!this.start.x && !this.start.y) {
+            console.log('a');
+            this.start.x = event.offsetX
+            this.start.y = event.offsetY
+        }
+        this.click.x = element.getBoundingClientRect().left + (event.screenX - element.getBoundingClientRect().left - (this.start.x - 1))
+        this.click.y = element.getBoundingClientRect().top + (event.screenY - element.getBoundingClientRect().top - (this.start.y - 1))
+        console.log(element.getBoundingClientRect().left + (event.screenX - element.getBoundingClientRect().left - (this.start.x - 1)));
+        element.style.left =  this.click.x + "px"
+        element.style.top = this.click.y + "px"
         
         
     }
