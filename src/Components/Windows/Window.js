@@ -8,7 +8,7 @@ import { ReactComponent as Minimize } from '../../Assets/minimize.svg'
 
 import styles from './Window.module.scss'
 
-export const Window = ({icon, path, target, childen, ...props}) => {
+export const Window = ({icon, path, title, target, childen, ...props}) => {
     const { handleRemove, handleMinimize } = React.useContext(WindowContext)
     const eventMove = new EventMove()
     eventMove.init()
@@ -33,6 +33,9 @@ export const Window = ({icon, path, target, childen, ...props}) => {
                 </Button>
             </div>
         </header>
+        <div className={!title ? styles.center : styles.start}>
+            <span className={styles.title}>{title ? title : path}</span>
+        </div>
         {props.children}
     </div>
   )

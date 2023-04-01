@@ -6,7 +6,7 @@ import icon from '../../Assets/desktop/tech.png'
 export const WinTech = () => {
   return (
     
-      <Window icon={icon} path='Tecnologias' target='tech'>
+      <Window icon={icon} path='Tecnologias' target='tech' title='Tecnologias que domino'>
         <div className={styles.win}>
           WinTech
         </div>

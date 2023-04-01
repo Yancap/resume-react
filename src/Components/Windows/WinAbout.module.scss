@@ -1,0 +1,21 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.window{
+    box-sizing: border-box;
+    padding: 6px;
+    background-color: $color-secondary;
+    border-radius: 2px;
+    height: 75%;
+    overflow-y: scroll;
+    @include scroll-bar;
+    
+    p{
+        color: $color-primary;
+        font-family: $font-family-primary;
+        font-size: 24px;
+    }
+}
+
+.window::-webkit-scrollbar{
+}

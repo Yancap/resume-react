@@ -5,9 +5,9 @@
     position: absolute;
     top: 100px;
     left: 500px;
-    @include background-container;
-    height: 300px;
-    width: 500px;
+    @include background-default;
+    height: 400px;
+    width: 700px;
     z-index: $z-index-window;
     padding: 4px;
 }
@@ -70,4 +70,17 @@
         height: 100%;
         width: auto;
     }
+}
+.title{
+    font-family: $font-family-tertiary;
+    color: $color-primary;
+    font-size: 1.75rem;
+}
+
+.center{
+    width: 100%;
+    text-align: center;
+}
+.start{
+    width: 100%;
 }

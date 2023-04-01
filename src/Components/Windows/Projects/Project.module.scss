@@ -1,0 +1,80 @@
+@import '../../Sass/mixins';
+@import '../../Sass/variables';
+
+
+.project{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.project:hover{
+    .overlay{
+        display: block;
+        background-color: rgba(73, 87, 215, 0.38);;
+    }
+    .text{
+        border: none;
+        .overlay{
+            display: none;
+        }
+    }
+    span{
+        color: #ffffff;
+        position: relative;
+        z-index: 1;
+    }
+}
+.project[active]:hover{
+    .overlay{
+      display: block;  
+      opacity: 1;
+    }
+    .text{
+        border: 0.5px dashed #434050;
+        position: relative;
+        .overlay{
+            background-color: #4C49D7;
+            display: block;
+        }
+    }
+}
+
+.icon{
+    width: 70%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.text{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    min-height: 35%;
+    span{
+        font-family: $font-family-primary;
+        font-size: 16px;
+        color: $color-primary;
+        letter-spacing: -0.035em;
+    }
+}
+
+.overlay{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
