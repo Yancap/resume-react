@@ -6,7 +6,7 @@ import icon from '../../Assets/desktop/about.png'
 export const WinAbout = () => {
   return (
     
-      <Window target='about' icon={icon} path='Sobre Mim' styles={{display: 'block'}}>
+      <Window target='about' icon={icon} path='Sobre Mim' style={{display: 'block'}}>
         <div className={styles.window}>
           <p>
             Olá, Me Chamo Yan Gabriel Ferreira.

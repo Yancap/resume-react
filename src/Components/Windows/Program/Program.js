@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Project.module.scss'
+import styles from './Program.module.scss'
 
-export const Project = ({icon, text, path, github, setLink}) => {
+export const Program = ({icon, text, path, github, setLink}) => {
     function handleClick({currentTarget}){
         currentTarget.toggleAttribute('active')
         if (!path && !github) 

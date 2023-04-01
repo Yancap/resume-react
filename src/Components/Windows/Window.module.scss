@@ -19,8 +19,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blue;
+    background: linear-gradient(106.48deg, #e071d5 1.33%, #5359ca 98.15%);
     padding: 2px;
+    cursor:move;
 }
 
 .containerBtn{
@@ -31,13 +32,13 @@
         height: 100%;
         box-sizing: border-box;
         border-radius: 0.5px;
-        box-shadow: none;
         width: 20px;
         margin-right: 2px;
         padding: 2px;
         display: flex;
         align-items: center;
         justify-content: center;
+        @include background-default;
         &:nth-child(1){
             svg{
                 

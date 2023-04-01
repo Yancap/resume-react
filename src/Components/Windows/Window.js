@@ -13,8 +13,8 @@ export const Window = ({icon, path, title, target, childen, ...props}) => {
     const eventMove = new EventMove()
     eventMove.init()
   return (
-    <div onMouseDown={eventMove.handleDown}  onMouseUp={eventMove.handleUp} className={styles.window} {...props} style={{display: 'none'}} data-target={target}>
-        <header className={styles.header}>
+    <div  data-target={target} {...props} className={styles.window} style={{display: 'none'}} >
+        <header  onMouseDown={eventMove.handleDown} onMouseUp={eventMove.handleUp} className={styles.header}>
             <div className={styles.containerSpan}>
                 <div>
                     <img src={icon} alt="" srcSet="" />

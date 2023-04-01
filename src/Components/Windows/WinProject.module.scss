@@ -5,7 +5,7 @@
 .window{
    @include window-content;
    margin-top: 2px;
-   height: 68%;
+   height: calc($height-window-content - 25px);
    display: grid;
    grid-template-columns: repeat(6, 1fr);
    grid-template-rows: 110px;
@@ -15,6 +15,7 @@
     display: grid;
     grid-template-columns: 1fr 26fr 1.5fr;
     gap: 2px;
+    height: 25px;
     button{
         height: 100%;
         div{

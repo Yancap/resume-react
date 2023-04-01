@@ -2,14 +2,9 @@
 @import '../Sass/variables';
 
 .window{
-    box-sizing: border-box;
-    padding: 6px;
-    background-color: $color-secondary;
-    border-radius: 2px;
-    height: 75%;
-    overflow-y: scroll;
+    @include window-content;
     @include scroll-bar;
-    
+    height: $height-window-content;
     p{
         color: $color-primary;
         font-family: $font-family-primary;
