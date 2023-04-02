@@ -3,7 +3,8 @@ import styles from './Program.module.scss'
 
 export const Program = ({icon, text, path, github, setLink}) => {
     function handleClick({currentTarget}){
-        currentTarget.toggleAttribute('active')
+      currentTarget.toggleAttribute('active')
+      if (setLink) {
         if (!path && !github) 
             setLink('Indisponível no Momento')
         else if (!path)
@@ -12,7 +13,7 @@ export const Program = ({icon, text, path, github, setLink}) => {
             setLink(path)
         else 
             setLink({path, github})
-        
+      }
     }
     function mouseOut({currentTarget}){
         currentTarget.removeAttribute('active')
