@@ -16,6 +16,7 @@ import html from '../../Assets/tech/html-css.svg'
 import figma from '../../Assets/tech/figma.svg'
 import bootstrap from '../../Assets/tech/bootstrap.svg'
 import { WindowContext } from '../Context/WindowContext'
+import { Prompt } from './Prompt'
 
 
 export const WinTech = () => {
@@ -38,8 +39,9 @@ export const WinTech = () => {
           <Program icon={bootstrap} text='BOOTSTRAP'  data-point='bootstrap' data-desktop='bootstrap' handleClick={handleClick}/>
           </div>
       </Window>
+      
           <Window icon={icon} target='react'>
-              terminal
+            <Prompt />
           </Window>
           <Window icon={icon} target='node'>
               terminal
