@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './Program.module.scss'
 
-export const Program = ({icon, text, path, github, setLink}) => {
-    function handleClick({currentTarget}){
+export const Program = ({icon, text, path, github, setLink, handleClick, ...props}) => {
+    
+    function open({currentTarget}){
       currentTarget.toggleAttribute('active')
       if (setLink) {
         if (!path && !github) 
@@ -15,11 +16,13 @@ export const Program = ({icon, text, path, github, setLink}) => {
             setLink({path, github})
       }
     }
+    
+    
     function mouseOut({currentTarget}){
         currentTarget.removeAttribute('active')
     }
   return (
-    <div className={styles.project} onMouseOut={mouseOut} onDoubleClick={handleClick} data-path={path}>
+    <div className={styles.project} onMouseOut={mouseOut} onDoubleClick={handleClick ? handleClick : open} data-path={path} {...props}>
       <div className={styles.icon}>
         <img src={icon} />
       </div>

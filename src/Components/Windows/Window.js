@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '../Common/Button'
 import { WindowContext } from '../Context/WindowContext'
-import { EventMove } from './EventMove'
+import { EventMove, SelectWindow } from './EventMove'
 import { ReactComponent as Close } from '../../Assets/close.svg'
 import { ReactComponent as Fullscreen } from '../../Assets/fullscreen.svg'
 import { ReactComponent as Minimize } from '../../Assets/minimize.svg'
@@ -11,9 +11,13 @@ import styles from './Window.module.scss'
 export const Window = ({icon, path, title, target, childen, ...props}) => {
     const { handleRemove, handleMinimize } = React.useContext(WindowContext)
     const eventMove = new EventMove()
+    React.useEffect( ()=> {  
+        SelectWindow.bindEvents()
+    })
     eventMove.init()
   return (
-    <div  data-target={target} {...props} className={styles.window} style={{display: 'none'}} >
+    <div data-component='window' data-target={target} onClick={SelectWindow.handleClick}
+    {...props} className={styles.window} style={{display: 'none'}} >
         <header  onMouseDown={eventMove.handleDown} onMouseUp={eventMove.handleUp} className={styles.header}>
             <div className={styles.containerSpan}>
                 <div>
@@ -33,6 +37,7 @@ export const Window = ({icon, path, title, target, childen, ...props}) => {
                 </Button>
             </div>
         </header>
+        
         <div className={!title ? styles.center : styles.start}>
             <span className={styles.title}>{title ? title : path}</span>
         </div>

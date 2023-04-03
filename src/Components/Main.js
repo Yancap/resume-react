@@ -13,6 +13,7 @@ import { WinTech } from './Windows/WinTech.js'
 import { WinContacts } from './Windows/WinContacts.js'
 import { WinSoftSkills } from './Windows/WinSoftSkills.js'
 import { WinCurriculum } from './Windows/WinCurriculum.js'
+import { Window } from './Windows/Window'
 
 
 

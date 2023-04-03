@@ -7,8 +7,7 @@ export class EventMove{
     handleDown(event){
         const element = event.currentTarget.parentNode
         element.addEventListener('mousemove', this.handleMove)
-        element.style.zIndex = 45
-        //element.addEventListener('mouseout', this.handleUp)
+        SelectWindow.handleClick(element)
     }
     handleUp(event){
         this.click.x = 0
@@ -16,7 +15,6 @@ export class EventMove{
         this.start.x = null
         this.start.y = null
         const element = event.currentTarget.parentNode
-        SelectWindow.handleClick(element)
         element.removeEventListener('mousemove', this.handleMove)
         //element.removeEventListener('mouseout', this.handleUp)
     }
@@ -49,9 +47,25 @@ export class EventMove{
 }
 
 export class SelectWindow{
-    static z_index = 35
-    static handleClick(element){
-        this.z_index++
-        element.style.zIndex = this.z_index
+    static front = 35
+    static back = this.front - 1
+    static windows = []
+    static handleClick({currentTarget}){
+        this.windows = document.querySelectorAll("div[data-component=window]")
+        if(currentTarget){
+            console.log(this.front);
+            this.windows.forEach(element =>{
+                if(element.dataset.target === currentTarget.dataset.target){
+                    currentTarget.style.zIndex = this.front
+                } else {
+                    element.style.zIndex = this.back
+                    this.back = this.front - 1
+                }
+            })
+        }
     }
+    static bindEvents(){
+        this.handleClick = this.handleClick.bind(this)
+    }
+    
 }

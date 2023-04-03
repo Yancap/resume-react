@@ -53,6 +53,8 @@ export const WinProject = () => {
           <Program icon={fox} text='Site Animais Fantasticos.html' github='https://github.com/Yancap/site-animais-projeto-origamid' setLink={setLink}/>
           <Program icon={fbit} text='Site da Incubadora FB1T.html' path='https://yan-resume.netlify.app/projects/startup_fbit/' setLink={setLink}/>
           <Program icon={fbtech} text='Site da Incubadora FB1T.html' path='https://yan-resume.netlify.app/projects/site%20da%20incubadora%20(rev%2029)/index.html' setLink={setLink}/>
+
+            
         </div>
       </Window>
     

@@ -15,28 +15,64 @@ import python from '../../Assets/tech/python.svg'
 import html from '../../Assets/tech/html-css.svg'
 import figma from '../../Assets/tech/figma.svg'
 import bootstrap from '../../Assets/tech/bootstrap.svg'
+import { WindowContext } from '../Context/WindowContext'
 
 
 export const WinTech = () => {
+  const {handleClick} = React.useContext(WindowContext)
   return (
-    
+      <>
       <Window icon={icon} path='Tecnologias' target='tech' title='Tecnologias que domino'>
         <div className={styles.window}>
-          <Program icon={react} text='REACT'   />
-          <Program icon={node} text='NODE/EXPRESS'  />
-          <Program icon={javascript} text='JAVASCRIPT'  />
-          <Program icon={styled} text='CSS-IN-JS'  />
-          <Program icon={git} text='GIT/GITHUB'  />
-          <Program icon={sql} text='SQL'  />
-          <Program icon={typescript} text='TYPESCRIPT'  />
-          <Program icon={sass} text='SASS/SCSS'  />
-          <Program icon={python} text='PYTHON'  />
-          <Program icon={html} text='HTML/CSS'  />
-          <Program icon={figma} text='FIGMA'  />
-          <Program icon={bootstrap} text='BOOTSTRAP'  />
-          
-        </div>
+          <Program icon={react} data-point='react' data-desktop='react' text='REACT' handleClick={handleClick} />
+          <Program icon={node} text='NODE/EXPRESS' data-point='node' data-desktop='node' handleClick={handleClick} />
+          <Program icon={javascript} text='JAVASCRIPT'  data-point='js' data-desktop='js' handleClick={handleClick}/>
+          <Program icon={styled} text='CSS-IN-JS'  data-point='cssInJs' data-desktop='cssInJs' handleClick={handleClick}/>
+          <Program icon={git} text='GIT/GITHUB'  data-point='git' data-desktop='git' handleClick={handleClick}/>
+          <Program icon={sql} text='SQL'  data-point='sql' data-desktop='sql' handleClick={handleClick}/>
+          <Program icon={typescript} text='TYPESCRIPT'  data-point='ts' data-desktop='ts' handleClick={handleClick}/>
+          <Program icon={sass} text='SASS/SCSS'  data-point='sass' data-desktop='sass' handleClick={handleClick}/>
+          <Program icon={python} text='PYTHON'  data-point='python' data-desktop='python' handleClick={handleClick}/>
+          <Program icon={html} text='HTML/CSS'  data-point='html' data-desktop='html' handleClick={handleClick}/>
+          <Program icon={figma} text='FIGMA'  data-point='figma' data-desktop='figma' handleClick={handleClick}/>
+          <Program icon={bootstrap} text='BOOTSTRAP'  data-point='bootstrap' data-desktop='bootstrap' handleClick={handleClick}/>
+          </div>
       </Window>
+          <Window icon={icon} target='react'>
+              terminal
+          </Window>
+          <Window icon={icon} target='node'>
+              terminal
+          </Window>
+          <Window icon={icon} target='js'>
+              terminal
+          </Window>
+          <Window icon={icon} target='cssInJs'>
+              terminal
+          </Window>
+          <Window icon={icon} target='git'>
+              terminal
+          </Window>
+          <Window icon={icon} target='ts'>
+              terminal
+          </Window>
+          <Window icon={icon} target='sass'>
+              terminal
+          </Window>
+          <Window icon={icon} target='python'>
+              terminal
+          </Window>
+          <Window icon={icon} target='html'>
+              terminal
+          </Window>
+          <Window icon={icon} target='figma'>
+              terminal
+          </Window>
+          <Window icon={icon} target='bootstrap'>
+              terminal
+          </Window>
+      </>
+      
     
   )
 }
