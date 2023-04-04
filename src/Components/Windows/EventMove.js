@@ -1,4 +1,5 @@
 import React from 'react'
+import { WindowContext } from '../Context/WindowContext'
 
 export class EventMove{
     click = {x:0,y:0}
@@ -7,7 +8,6 @@ export class EventMove{
     handleDown(event){
         const element = event.currentTarget.parentNode
         element.addEventListener('mousemove', this.handleMove)
-        SelectWindow.handleClick(element)
     }
     handleUp(event){
         this.click.x = 0
@@ -47,24 +47,22 @@ export class EventMove{
 }
 
 export class SelectWindow{
-    static front = 35
-    static back = this.front - 1
-    static windows = []
-    static handleClick({currentTarget}){
-        this.windows = document.querySelectorAll("div[data-component=window]")
+    windows = []
+    constructor(){
+        this.front = 35 
+        this.back = this.front - 1
+        this.handleClick = this.handleClick.bind(this)
+    }
+    handleClick({currentTarget}){
         if(currentTarget){
-            this.windows.forEach(element =>{
+            document.querySelectorAll("div[data-component=window]").forEach(element =>{
                 if(element.dataset.target === currentTarget.dataset.target){
-                    currentTarget.style.zIndex = this.front
+                    currentTarget.style.zIndex = 35
                 } else {
-                    element.style.zIndex = this.back
-                    this.back = this.front - 1
+                    element.style.zIndex = 35 - 1
                 }
             })
         }
-    }
-    static bindEvents(){
-        this.handleClick = this.handleClick.bind(this)
     }
     
 }

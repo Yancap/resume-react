@@ -6,7 +6,6 @@ export const WindowStorage = ({children}) => {
     const [tabs, setTabs] = React.useState(null)
     const [active, setActive] = React.useState({})
     function handleClick(event) {
-        let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}'`)
         setActive({...active, [event.currentTarget.dataset.point]: true})
         if (tabs) {
             setTabs({
@@ -41,8 +40,6 @@ export const WindowStorage = ({children}) => {
             element.style.visibility = 'hidden'
             document.querySelector(`#tabs button[data-point='${event.currentTarget.dataset.point}']`).removeAttribute('disabled')
         }
-        console.log(tabs);
-            
     }
     function handleOpen(event) {
         if(event.currentTarget.dataset.point){
@@ -50,8 +47,6 @@ export const WindowStorage = ({children}) => {
             element.style.visibility = 'visible'
             document.querySelector(`#tabs button[data-point='${event.currentTarget.dataset.point}']`).setAttribute('disabled', 'disabled')
         }
-        
-            
     }
   return (
     <WindowContext.Provider value={{tabs, active ,handleClick, handleRemove, handleMinimize, handleOpen}}>

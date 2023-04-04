@@ -11,12 +11,10 @@ import styles from './Window.module.scss'
 export const Window = ({icon, path, title, target, winName, ...props}) => {
     const { handleRemove, handleMinimize } = React.useContext(WindowContext)
     const eventMove = new EventMove()
-    React.useEffect( ()=> {  
-        SelectWindow.bindEvents()
-    })
+    const selectWindow = new SelectWindow()
     eventMove.init()
   return (
-    <div data-component='window' data-target={target} onClick={SelectWindow.handleClick}
+    <div data-component='window' data-target={target} onClick={selectWindow.handleClick}
     {...props} className={styles.window} >
         <header  onMouseDown={eventMove.handleDown} onMouseUp={eventMove.handleUp} className={styles.header}>
             <div className={styles.containerSpan}>
