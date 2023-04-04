@@ -17,7 +17,7 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
     eventMove.init()
   return (
     <div data-component='window' data-target={target} onClick={SelectWindow.handleClick}
-    {...props} className={styles.window} style={{display: 'none'}} >
+    {...props} className={styles.window} >
         <header  onMouseDown={eventMove.handleDown} onMouseUp={eventMove.handleUp} className={styles.header}>
             <div className={styles.containerSpan}>
                 <div>

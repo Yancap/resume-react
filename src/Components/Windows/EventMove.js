@@ -53,7 +53,6 @@ export class SelectWindow{
     static handleClick({currentTarget}){
         this.windows = document.querySelectorAll("div[data-component=window]")
         if(currentTarget){
-            console.log(this.front);
             this.windows.forEach(element =>{
                 if(element.dataset.target === currentTarget.dataset.target){
                     currentTarget.style.zIndex = this.front

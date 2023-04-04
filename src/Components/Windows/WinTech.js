@@ -20,7 +20,8 @@ import { Prompt } from './Prompt'
 
 
 export const WinTech = () => {
-  const {handleClick} = React.useContext(WindowContext)
+  const {handleClick, active} = React.useContext(WindowContext)
+  console.log(active);
   return (
       <>
       <Window icon={icon} path='Tecnologias' target='tech' title='Tecnologias que domino'>
@@ -39,40 +40,49 @@ export const WinTech = () => {
           <Program icon={bootstrap} text='BOOTSTRAP'  data-point='bootstrap' data-desktop='bootstrap' handleClick={handleClick}/>
           </div>
       </Window>
-      
-          <Window icon={icon} target='react' winName='Prompt'>
-            <Prompt title='react'/>
+          {active.react && 
+            <Window icon={icon} target='react' winName='Prompt'>
+                <Prompt title='react'/>
+            </Window>
+          }
+          {active.node && <Window icon={icon} target='node'>
+              <Prompt title='node'/>
+          </Window> 
+          }
+          {active.js && <Window icon={icon} target='js'>
+              <Prompt title='js'/>
           </Window>
-          <Window icon={icon} target='node'>
-              terminal
+          }
+          {active.cssInJs &&<Window icon={icon} target='cssInJs'>
+              <Prompt title='css'/>
           </Window>
-          <Window icon={icon} target='js'>
-              terminal
+          }
+          {active.git && <Window icon={icon} target='git'>
+              <Prompt title='git'/>
           </Window>
-          <Window icon={icon} target='cssInJs'>
-              terminal
+          }
+          {active.ts && <Window icon={icon} target='ts'>
+              <Prompt title='ts'/>
           </Window>
-          <Window icon={icon} target='git'>
-              terminal
-          </Window>
-          <Window icon={icon} target='ts'>
-              terminal
-          </Window>
-          <Window icon={icon} target='sass'>
-              terminal
-          </Window>
-          <Window icon={icon} target='python'>
-              terminal
-          </Window>
-          <Window icon={icon} target='html'>
-              terminal
-          </Window>
-          <Window icon={icon} target='figma'>
-              terminal
-          </Window>
-          <Window icon={icon} target='bootstrap'>
-              terminal
-          </Window>
+          }
+          {active.sass && <Window icon={icon} target='sass'>
+              <Prompt title='sass'/>
+          </Window>}
+          {active.python && <Window icon={icon} target='python'>
+              <Prompt title='python'/>
+          </Window>}
+          {active.html && <Window icon={icon} target='html'>
+              <Prompt title='html'/>
+          </Window>}
+          {active.figma && <Window icon={icon} target='figma'>
+              <Prompt title='figma'/>
+          </Window>}
+          {active.bootstrap && <Window icon={icon} target='bootstrap'>
+              <Prompt title='bootstrap'/>
+          </Window>}
+          {active.sql && <Window icon={icon} target='sql'>
+              <Prompt title='sql'/>
+          </Window>}
       </>
       
     

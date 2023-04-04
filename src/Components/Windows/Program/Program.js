@@ -16,8 +16,6 @@ export const Program = ({icon, text, path, github, setLink, handleClick, ...prop
             setLink({path, github})
       }
     }
-    
-    
     function mouseOut({currentTarget}){
         currentTarget.removeAttribute('active')
     }

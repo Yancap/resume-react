@@ -18,7 +18,7 @@ import { Window } from './Windows/Window'
 
 
 export const Main = () => {
-  const {handleClick} = React.useContext(WindowContext)
+  const {handleClick, active} = React.useContext(WindowContext)
   
   return (
     <main className={styles.main}>
@@ -30,12 +30,12 @@ export const Main = () => {
           <SoftSkills id='soft-skills' data-point='soft-skills' onClick={handleClick}/>
           <Curriculum id='curriculum' data-point='curriculum' onClick={handleClick}/>
 
-          <WinProject />
-          <WinAbout />
-          <WinTech />
-          <WinContacts />
-          <WinSoftSkills />
-          <WinCurriculum />
+          {active['my-projects'] && <WinProject />}
+          {active.about && <WinAbout /> }
+          {active.tech && <WinTech />}
+          {active.contact && <WinContacts />}
+          {active['soft-skills'] && <WinSoftSkills />}
+          {active.curriculum && <WinCurriculum />}
       </div>
     </main>
   )
