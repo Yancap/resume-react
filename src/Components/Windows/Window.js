@@ -8,7 +8,7 @@ import { ReactComponent as Minimize } from '../../Assets/minimize.svg'
 
 import styles from './Window.module.scss'
 
-export const Window = ({icon, path, title, target, childen, ...props}) => {
+export const Window = ({icon, path, title, target, winName, ...props}) => {
     const { handleRemove, handleMinimize } = React.useContext(WindowContext)
     const eventMove = new EventMove()
     React.useEffect( ()=> {  
@@ -23,7 +23,7 @@ export const Window = ({icon, path, title, target, childen, ...props}) => {
                 <div>
                     <img src={icon} alt="" srcSet="" />
                 </div>
-                <span>{path}</span>
+                <span>{path || winName}</span>
             </div>
             <div className={styles.containerBtn}>
                 <Button  onClick={handleMinimize} data-point={target}>

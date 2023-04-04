@@ -40,8 +40,8 @@ export const WinTech = () => {
           </div>
       </Window>
       
-          <Window icon={icon} target='react'>
-            <Prompt />
+          <Window icon={icon} target='react' winName='Prompt'>
+            <Prompt title='react'/>
           </Window>
           <Window icon={icon} target='node'>
               terminal

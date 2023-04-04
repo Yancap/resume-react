@@ -1,0 +1,56 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.prompt{
+    box-sizing: border-box;
+    display: grid;
+    background-color: #434050;
+    border: 2px solid #FFFFFF;
+    height: calc($height-window-content + 71px);
+    padding: 16px 14px;
+    overflow-y: auto;
+}
+.ascii{
+    height: 140px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+.command{
+    span, input, label, li{
+        font-family: $font-family-primary;
+        font-size: 14px;
+        color: #52FF00;
+        list-style: none;
+    }
+    input{
+        background-color: transparent;
+        border: none;
+        &:focus-visible{
+            outline: none;
+        }
+    }
+    li{
+        position: relative;
+        display: none;
+     }
+    li[data-active]{
+        @keyframes showSkills {
+            from{
+                top: 40px;
+                transform: rotateX(40deg);
+            }
+            to{
+                top: 0;
+                transform: rotateX(0deg);
+            }
+        }
+        animation: showSkills 1s forwards ;
+    }
+        
+}
+    
