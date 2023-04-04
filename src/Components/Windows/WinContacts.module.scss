@@ -1,0 +1,48 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.contact{
+    display: flex;
+
+    form{
+        @include background-container-select;
+        border-radius: 2px;
+        padding: 10px 8px;
+        background-color: #B4B3BD;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    button{
+        align-self: flex-start;
+        span{
+            font-family: $font-family-primary;
+            font-size: 18px;
+        }
+    }
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    input, textarea{
+        @include background-container-select;
+        height: 26px;
+        font-size: 18px;
+        padding-left: 4px;
+        font-family: $font-family-primary;
+    }
+    input:focus-visible, textarea:focus-visible{
+        outline: none;
+    }
+    textarea{
+        height: 100px;
+    }
+    label{
+        font-family: $font-family-primary;
+        color: $color-primary;
+        font-size: 28px;
+    }
+}

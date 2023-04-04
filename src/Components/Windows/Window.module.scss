@@ -6,7 +6,8 @@
     top: 100px;
     left: 500px;
     @include background-default;
-    height: 400px;
+    height: auto;
+    min-height: 400px;
     width: 700px;
     z-index: $z-index-window;
     padding: 5px;
