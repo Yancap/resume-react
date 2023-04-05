@@ -32,11 +32,11 @@ export const WinContacts = () => {
             <div className={styles.network}>
               <div className={styles.link}>
                 <Linkedin />
-                <a href="https://www.linkedin.com/in/yangabriel">https://www.linkedin.com/in/yangabriel/</a>
+                <a href="https://www.linkedin.com/in/yangabriel" target='_blank'>https://www.linkedin.com/in/yangabriel/</a>
               </div>
               <div className={styles.link}>
                 <Git />
-                <a href="https://github.com/Yancap">https://github.com/Yancap</a>
+                <a href="https://github.com/Yancap" target='_blank'>https://github.com/Yancap</a>
               </div>
               <div className={styles.link}>
                 <Instagram />
@@ -44,15 +44,15 @@ export const WinContacts = () => {
               </div>
               <div className={styles.link}>
                 <Local />
-                <a href="">Rio de Janeiro, RJ, Brasil</a>
+                <span href="">Rio de Janeiro, RJ, Brasil</span>
               </div>
               <div className={styles.link}>
                 <Email />
-                <a href="">yangabriel3001f@gmail.com</a>
+                <span href="">yangabriel3001f@gmail.com</span>
               </div>
               <div className={styles.link}>
                 <Phone />
-                <a href="">(21) 99164-2554</a>
+                <span href="">(21) 99164-2554</span>
               </div>
 
             </div>

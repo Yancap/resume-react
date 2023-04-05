@@ -1,0 +1,86 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.window{
+    box-sizing: border-box;
+    @include window-content;
+    background-color: #F3ECE2;
+    overflow-y: auto;
+    margin-top: 2px;
+    padding: 8px;
+    min-height: $height-window-content;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
+ }
+
+ .download{
+    display: grid;
+    place-items: center;
+    margin: 20px 0px 15px 0px;
+    button{
+        background-color: #B4B3BD;
+        padding: 8px;
+    }
+    a{
+        text-decoration: none;
+        color: $color-primary;
+        font-family: $font-family-secondary;
+        font-weight: 600;
+        font-size: 24px;
+    }
+ }
+
+.content{
+    width: 100%;
+
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    li{
+        margin-left: 14px;
+    }
+    ul{
+        li{
+            margin-left: 0px;
+        }
+    }
+    strong{
+        color: #423F53;
+    }
+}
+
+ .title{
+    color: $color-primary;
+    font-family: $font-family-primary;
+ }
+
+ .subtitle{
+    color: #423F53;
+    font-family: $font-family-primary;
+    margin-top: 2px;
+ }
+
+ .paragraph{
+    color: #423F53;
+    font-family: $font-family-primary;
+    font-size: 18px;
+ }
+
+ .list{
+    width: 100%;
+    display: flex;
+    gap: 22px;
+    margin-top: 6px;
+    div:nth-child(1){
+        width: 45%;
+    }
+ }
