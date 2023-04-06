@@ -3,10 +3,45 @@
 
 .menu{
     @include background-container;
-    height: 50vh;
+    height: 30vh;
     width: 200px;
     position: absolute;
     left: 0;
-    bottom: 5vh;
+    bottom: 4.725vh;
     padding: 2px 4px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    gap: 2px;
+    div[data-desktop]{
+        align-self: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 14px;
+        height: 100%;
+        div:nth-child(1){
+            width: 20%;
+            height: 24px;
+        }
+        div:nth-child(2){
+            display: flex;
+            align-items: center;
+            span{
+                color: $color-primary;
+            }
+        }
+        div:nth-child(3){
+            background-color: #A9A8C8;
+        }
+    }
+    div[data-desktop]:hover{
+        span{
+            color: #fff !important;
+        }
+    }
+
 }

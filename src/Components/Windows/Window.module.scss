@@ -7,10 +7,13 @@
     left: 500px;
     @include background-default;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
     min-height: 400px;
     width: 700px;
     z-index: $z-index-window;
-    padding: 5px;
+    padding: 5px 5px 0px 5px;
 }
 
 .header{
@@ -85,4 +88,22 @@
 }
 .start{
     width: 100%;
+}
+
+.resize{
+    align-self: flex-end;
+    position: relative;
+    margin-top: 2px;
+    height: 12px;
+    width: 12px;
+
+    svg{
+        position: absolute;
+        left: 3px;
+        top: -1px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    cursor:nw-resize;
 }

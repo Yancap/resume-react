@@ -2,17 +2,20 @@ import React from 'react'
 import { Button } from '../Common/Button'
 import { WindowContext } from '../Context/WindowContext'
 import { EventMove, SelectWindow } from './EventMove'
+import { ResizeWindow } from '../Script/ResizeWindow.js'
 import { ReactComponent as Close } from '../../Assets/close.svg'
 import { ReactComponent as Fullscreen } from '../../Assets/fullscreen.svg'
 import { ReactComponent as Minimize } from '../../Assets/minimize.svg'
-
+import { ReactComponent as Resize } from '../../Assets/resize-bottom-right.svg'
 import styles from './Window.module.scss'
 
 export const Window = ({icon, path, title, target, winName, ...props}) => {
     const { handleRemove, handleMinimize } = React.useContext(WindowContext)
     const eventMove = new EventMove()
     const selectWindow = new SelectWindow()
+    const resizeWindow = new ResizeWindow()
     eventMove.init()
+    resizeWindow.init()
   return (
     <div data-component='window' data-target={target} onClick={selectWindow.handleClick}
     {...props} className={styles.window} >
@@ -40,6 +43,11 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
             <span className={styles.title}>{title ? title : path}</span>
         </div>
         {props.children}
+        <div className={styles.resize} onMouseDown={resizeWindow.handleDown} onMouseUp={resizeWindow.handleUp}>
+            
+                <Resize />
+           
+        </div>
     </div>
   )
 }
