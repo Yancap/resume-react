@@ -14,7 +14,7 @@ export class ResizeWindow{
         const element = event.currentTarget
         this.click.x =  (event.clientX - element.getBoundingClientRect().left) + 1
         this.click.y =  (event.clientY - element.getBoundingClientRect().top) + 1
-            
+        
         element.style.width =  this.click.x + "px"
         element.style.height = this.click.y + "px"
     }

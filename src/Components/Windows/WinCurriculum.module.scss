@@ -8,7 +8,7 @@
     overflow-y: auto;
     margin-top: 2px;
     padding: 8px;
-    min-height: $height-window-content;
+    min-height:  calc($height-window-content - 60px);
     height: 360px;
     display: flex;
     flex-direction: column;
