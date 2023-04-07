@@ -4,6 +4,7 @@
 .contact{
     display: flex;
     gap: 8px;
+    height: calc($height-window-content - 12px);
     form{
         @include background-container-select;
         border-radius: 2px;
@@ -15,6 +16,7 @@
         justify-content: space-around;
     }
     button{
+        height: 34px;
         align-self: flex-start;
         span{
             font-family: $font-family-primary;

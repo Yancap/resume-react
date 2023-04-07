@@ -12,7 +12,7 @@ import { ReactComponent as Phone } from '../../Assets/contact/phone.svg'
 
 export const WinContacts = () => {
   return (
-      <Window icon={icon} path='Contatos' target='contact'>
+      <Window icon={icon} path='Contatos' target='contact' minW='500px' minH='410px'>
         <div className={styles.contact}>
           <form action="">
              <div className={styles.label}>

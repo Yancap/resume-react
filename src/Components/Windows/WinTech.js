@@ -24,7 +24,7 @@ export const WinTech = () => {
   console.log(active);
   return (
       <>
-      <Window icon={icon} path='Tecnologias' target='tech' title='Tecnologias que domino'>
+      <Window icon={icon} path='Tecnologias' target='tech' title='Tecnologias que domino' minH='385px' minW='475px'>
         <div className={styles.window}>
           <Program icon={react} data-point='react' data-desktop='react' text='REACT' handleClick={handleClick} />
           <Program icon={node} text='NODE/EXPRESS' data-point='node' data-desktop='node' handleClick={handleClick} />
@@ -38,7 +38,7 @@ export const WinTech = () => {
           <Program icon={html} text='HTML/CSS'  data-point='html' data-desktop='html' handleClick={handleClick}/>
           <Program icon={figma} text='FIGMA'  data-point='figma' data-desktop='figma' handleClick={handleClick}/>
           <Program icon={bootstrap} text='BOOTSTRAP'  data-point='bootstrap' data-desktop='bootstrap' handleClick={handleClick}/>
-          </div>
+        </div>
       </Window>
           {active.react && 
             <Window icon={icon} target='react' winName='Prompt'>

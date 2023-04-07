@@ -18,8 +18,8 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
     resizeWindow.init()
   return (
     <div data-component='window' data-target={target} onClick={selectWindow.handleClick}
-    {...props} className={styles.window} >
-        <header  onMouseDown={eventMove.handleDown} onMouseUp={eventMove.handleUp} className={styles.header}>
+    {...props} className={styles.window} style={{minHeight: props.minH, minWidth: props.minW}}>
+        <header  draggable onDrag={eventMove.handleDown} onDragEnd={eventMove.handleUp} className={styles.header}>
             <div className={styles.containerSpan}>
                 <div>
                     <img src={icon} alt="" srcSet="" />
@@ -43,10 +43,8 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
             <span className={styles.title}>{title ? title : path}</span>
         </div>
         {props.children}
-        <div className={styles.resize} onMouseDown={resizeWindow.handleDown} onMouseUp={resizeWindow.handleUp}>
-            
-                <Resize />
-           
+        <div className={styles.resize} draggable onDrag={resizeWindow.handleDown} onDragEnd={resizeWindow.handleUp}>
+            <Resize />
         </div>
     </div>
   )

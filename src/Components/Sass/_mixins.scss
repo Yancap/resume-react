@@ -84,6 +84,5 @@
     border: 1.5px solid $color-primary;
     border-radius: 2px;
     overflow: auto;
-    max-height: $height-window-content;
     @include scroll-bar;
 }

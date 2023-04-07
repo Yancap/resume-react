@@ -30,7 +30,7 @@ export const WinProject = () => {
   }
   return (
     
-      <Window icon={icon} path='Meus Projetos' target='my-projects' title='Projetos que desenvolvi'>
+      <Window icon={icon} path='Meus Projetos' target='my-projects' title='Projetos que desenvolvi' minH='350px' minW='490px'>
         <nav className={styles.path}>
           <Button icon={home} onClick={() => setLink(null)}/>
           <div className={styles.search}>

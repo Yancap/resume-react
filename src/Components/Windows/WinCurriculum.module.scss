@@ -1,6 +1,10 @@
 @import '../Sass/mixins';
 @import '../Sass/variables';
 
+.container{
+    height: calc($height-window-content - 14px);
+}
+
 .window{
     box-sizing: border-box;
     @include window-content;
@@ -8,8 +12,7 @@
     overflow-y: auto;
     margin-top: 2px;
     padding: 8px;
-    min-height:  calc($height-window-content - 60px);
-    height: 360px;
+    height:  calc(100% - 53px);
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -19,7 +22,8 @@
  .download{
     display: grid;
     place-items: center;
-    margin: 20px 0px 15px 0px;
+    box-sizing: border-box;
+    margin-top: 5px;
     button{
         background-color: #B4B3BD;
         padding: 8px;

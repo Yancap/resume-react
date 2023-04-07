@@ -7,38 +7,39 @@ export class EventMove{
     zindex = 40
     handleDown(event){
         const element = event.currentTarget.parentNode
-        element.addEventListener('mousemove', this.handleMove)
+        console.log(event);
+        if (!this.start.x && !this.start.y) {
+            this.start.x = (event.clientX - element.getBoundingClientRect().left) 
+            this.start.y = (event.clientY - element.getBoundingClientRect().top)
+        }
+        if (event.clientY === 0 && event.clientX === 0) {
+            return 0
+        }
+        this.click.y =  (event.clientY  -  this.start.y)
+        this.click.x =  (event.clientX  - this.start.x)
+        //
+        console.log();
+        element.style.left =  this.click.x + "px"
+        element.style.top = this.click.y + "px"
     }
     handleUp(event){
+        const element = event.currentTarget.parentNode
+        if (!this.start.x && !this.start.y) {
+            this.start.x = (event.clientX - element.getBoundingClientRect().left) 
+            this.start.y = (event.clientY - element.getBoundingClientRect().top)
+        }
+        this.click.y =  (event.clientY  -  this.start.y)
+        this.click.x =  (event.clientX  - this.start.x)
+        element.style.left =  this.click.x + "px"
+        element.style.top = this.click.y + "px"
         this.click.x = 0
         this.click.y = 0
         this.start.x = null
         this.start.y = null
-        const element = event.currentTarget.parentNode
-        element.removeEventListener('mousemove', this.handleMove)
-        //element.removeEventListener('mouseout', this.handleUp)
     }
-    handleMove(event){
-        const element = event.currentTarget
-        if (!this.start.x && !this.start.y) {
-            this.start.x = event.offsetX + 4
-            this.start.y = event.offsetY + 4
-        }
-        if (event.offsetY < 0) {
-            console.log(event.offsetY);
-            this.click.y =  (event.clientY  -  this.start.y) - 5
-        } else{
-            this.click.y =  (event.clientY  -  this.start.y)
-        }
-        this.click.x =  (event.clientX  - this.start.x)
-        //
-            
-        element.style.left =  this.click.x + "px"
-        element.style.top = this.click.y + "px"
-    }
+    
     bindEvents(){
         this.handleDown = this.handleDown.bind(this)
-        this.handleMove = this.handleMove.bind(this)
         this.handleUp = this.handleUp.bind(this)
     }
     init(){
