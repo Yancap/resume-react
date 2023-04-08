@@ -27,11 +27,35 @@
 }
 .start{
     margin-right: 8px;
+    button{
+        div:nth-child(1){
+            height: 0;
+            width: 0;
+        }
+        span{
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+        span::before{
+            content: ' ';
+            display: inline-block;
+            background-image: url('../../Assets/emoji.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 19px;
+            width: 19px;
+            font-family: $font-family-primary;
+            font-weight: bolder;
+        }
+    }
+    
 }
 
 .tabs{
     display: flex;
     button{
         margin-right: 4px;
+        
     }
 }

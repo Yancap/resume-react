@@ -41,46 +41,46 @@ export const WinTech = () => {
         </div>
       </Window>
           {active.react && 
-            <Window icon={icon} target='react' winName='Prompt'>
+            <Window icon={icon} target='react' winName='Prompt' minH='285px' minW='405px'>
                 <Prompt title='react'/>
             </Window>
           }
-          {active.node && <Window icon={icon} target='node'>
+          {active.node && <Window icon={icon} target='node' minH='285px' minW='405px'>
               <Prompt title='node'/>
           </Window> 
           }
-          {active.js && <Window icon={icon} target='js'>
+          {active.js && <Window icon={icon} target='js' minH='285px' minW='405px'>
               <Prompt title='js'/>
           </Window>
           }
-          {active.cssInJs &&<Window icon={icon} target='cssInJs'>
+          {active.cssInJs &&<Window icon={icon} target='cssInJs' minH='285px' minW='405px'>
               <Prompt title='css'/>
           </Window>
           }
-          {active.git && <Window icon={icon} target='git'>
+          {active.git && <Window icon={icon} target='git' minH='285px' minW='405px'>
               <Prompt title='git'/>
           </Window>
           }
-          {active.ts && <Window icon={icon} target='ts'>
+          {active.ts && <Window icon={icon} target='ts' minH='285px' minW='405px'>
               <Prompt title='ts'/>
           </Window>
           }
-          {active.sass && <Window icon={icon} target='sass'>
+          {active.sass && <Window icon={icon} target='sass' minH='285px' minW='405px'>
               <Prompt title='sass'/>
           </Window>}
-          {active.python && <Window icon={icon} target='python'>
+          {active.python && <Window icon={icon} target='python' minH='285px' minW='405px'>
               <Prompt title='python'/>
           </Window>}
-          {active.html && <Window icon={icon} target='html'>
+          {active.html && <Window icon={icon} target='html' minH='285px' minW='405px'>
               <Prompt title='html'/>
           </Window>}
-          {active.figma && <Window icon={icon} target='figma'>
+          {active.figma && <Window icon={icon} target='figma' minH='285px' minW='405px'>
               <Prompt title='figma'/>
           </Window>}
-          {active.bootstrap && <Window icon={icon} target='bootstrap'>
+          {active.bootstrap && <Window icon={icon} target='bootstrap' minH='285px' minW='405px'>
               <Prompt title='bootstrap'/>
           </Window>}
-          {active.sql && <Window icon={icon} target='sql'>
+          {active.sql && <Window icon={icon} target='sql' minH='285px' minW='405px'>
               <Prompt title='sql'/>
           </Window>}
       </>
