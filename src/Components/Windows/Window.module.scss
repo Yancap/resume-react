@@ -3,8 +3,8 @@
 
 .window{
     position: absolute;
-    top: 100px;
-    left: 500px;
+    top: 10vh;
+    left: 25vw;
     @include background-default;
     height: 360px;
     display: flex;
