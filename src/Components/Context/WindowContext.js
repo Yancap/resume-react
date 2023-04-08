@@ -7,6 +7,11 @@ export const WindowStorage = ({children}) => {
     const [active, setActive] = React.useState({})
     function handleClick(event) {
         setActive({...active, [event.currentTarget.dataset.point]: true})
+        console.log(active[event.currentTarget.dataset.point]);
+        if (active[event.currentTarget.dataset.point]) {
+            let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}'`)
+            console.log(element);
+        }
         if (tabs) {
             setTabs({
                 ...tabs, [event.currentTarget.dataset.point]: {
@@ -37,14 +42,14 @@ export const WindowStorage = ({children}) => {
     function handleMinimize(event) {
         if(event.currentTarget.dataset.point){
             let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}']`)
-            element.style.visibility = 'hidden'
+            element.style.animation = 'minimizeWindow .5s forwards'
             document.querySelector(`#tabs button[data-point='${event.currentTarget.dataset.point}']`).removeAttribute('disabled')
         }
     }
     function handleOpen(event) {
         if(event.currentTarget.dataset.point){
             let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}']`)
-            element.style.visibility = 'visible'
+            element.style.animation = 'openWindowTab .5s forwards'
             document.querySelector(`#tabs button[data-point='${event.currentTarget.dataset.point}']`).setAttribute('disabled', 'disabled')
         }
     }

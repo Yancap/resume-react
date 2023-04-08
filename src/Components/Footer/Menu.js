@@ -12,10 +12,9 @@ import { WindowContext } from '../Context/WindowContext.js'
 export const Menu = () => {
   const {handleClick} = React.useContext(WindowContext)
   return (
-    <nav className={styles.menu}>
+    <nav className={styles.menu} >
         <div className={styles.container}>
-          
-            <MyProjects id='my-projects' data-point='my-projects' onClick={handleClick}/>
+          <MyProjects id='my-projects' data-point='my-projects' onClick={handleClick}/>
           <About id='about' data-point='about' onClick={handleClick}/>
           <Tech id='tech' data-point='tech' onClick={handleClick}/>
           <Contact id='contact' data-point='contact' onClick={handleClick}/>

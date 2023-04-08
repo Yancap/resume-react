@@ -10,7 +10,7 @@ export const Struct = ({icon, text, target}) => {
       currentTarget.removeAttribute('active')
   }
   return (
-    <div className={styles.program} onMouseOut={mouseOut} onDoubleClick={handleClick} data-desktop={target}>
+    <div className={styles.program}  onMouseOut={mouseOut} onDoubleClick={handleClick} data-desktop={target}>
       <div className={styles.icon}>
         <img src={icon} />
       </div>

@@ -9,7 +9,20 @@
     left: 0;
     bottom: 4.725vh;
     padding: 2px 4px;
+    animation: open .25s forwards;
+    @keyframes open {
+        from{
+            height: 0;
+            opacity: 0;
+        }
+        to{
+            height: 30vh;
+            opacity: 1;
+        }
+    }
 }
+
+
 
 .container{
     display: grid;

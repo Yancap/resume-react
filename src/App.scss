@@ -18,3 +18,38 @@ body{
 .App, #root{
     height: 100%;
 }
+
+
+@keyframes openWindow {
+    from{
+        transform: scale(0) translateX(-85vw);
+
+    }
+    to{
+        
+        transform: scale(1) translateX(0);
+    }
+    
+}
+
+@keyframes minimizeWindow {
+    from{
+        transform: scale(1);
+        visibility: hidden;
+    }
+    to{
+        transform: scale(0);
+        visibility: visible;
+        top: 100%;
+        left: -20vw;
+    }
+}
+
+@keyframes openWindowTabs {
+    from{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+    }
+}

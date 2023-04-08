@@ -4,10 +4,8 @@ import { WindowContext } from '../Context/WindowContext'
 export class EventMove{
     click = {x:0,y:0}
     start = {x:null,y:null}
-    zindex = 40
     handleDown(event){
         const element = event.currentTarget.parentNode
-        console.log(event);
         if (!this.start.x && !this.start.y) {
             this.start.x = (event.clientX - element.getBoundingClientRect().left) 
             this.start.y = (event.clientY - element.getBoundingClientRect().top)
@@ -17,8 +15,6 @@ export class EventMove{
         }
         this.click.y =  (event.clientY  -  this.start.y)
         this.click.x =  (event.clientX  - this.start.x)
-        //
-        console.log();
         element.style.left =  this.click.x + "px"
         element.style.top = this.click.y + "px"
     }

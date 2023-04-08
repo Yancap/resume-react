@@ -5,13 +5,28 @@
     position: absolute;
     top: 10vh;
     left: 25vw;
-    @include background-default;
     height: 360px;
+    width: 700px;
+    @include background-default;
     display: flex;
     flex-direction: column;
-    width: 700px;
     z-index: $z-index-window;
     padding: 5px 5px 0px 5px;
+    animation: openWindow 0.5s forwards;
+    
+    @keyframes openWindow {
+        from{
+            transform: scale(0) translateX(-85vw);
+    
+        }
+        to{
+            
+            transform: scale(1) translateX(0);
+        }
+        
+    }
+    
+   
 }
 
 .header{
