@@ -10,7 +10,6 @@ export const Struct = ({icon, text, target}) => {
       currentTarget.removeAttribute('active')
   }
   const clientW = window.screen.width
-  console.log(clientW);
   return (
     clientW > 800 ? 
       <div className={styles.program}  onPointerOut={mouseOut}  onDoubleClick={handleClick} data-desktop={target}>

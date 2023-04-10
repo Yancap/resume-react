@@ -19,8 +19,9 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
     const resizeWindow = new ResizeWindow()
     eventMove.init()
     resizeWindow.init()
+    const clientW = window.screen.width
   return (
-    <div data-component='window' data-target={target} onClick={selectWindow.handleClick}
+    <div data-component='window' data-target={target} onPointerDown={selectWindow.handleClick}
     {...props} className={styles.window} style={{minHeight: props.minH, minWidth: props.minW}}>
         <header  draggable onDrag={eventMove.handleDown} onDragEnd={eventMove.handleUp} className={styles.header}>
             <div className={styles.containerSpan}>
@@ -30,33 +31,59 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
                 <span>{path || winName}</span>
             </div>
             <div className={styles.containerBtn}>
-                <Button  onClick={ event => {
-                    setBtn(true)
-                    handleMinimize(event)}} data-point={target}>
-                    <Minimize />
-                </Button>
-                {
-                    btn ? (<Button onClick={(event) => {
-                        setBtn(!btn)
-                        handleMaximize(event)
-                        }} data-point={target}>
-                            <Fullscreen />
-                           </Button>) :
-                    (<Button onClick={(event) => {
-                        setBtn(!btn)
-                        handleNormalize(event)
-                        }} data-point={target}>
-                        <Screen />
-                    </Button>)
-                }
-                
-                
-                <Button  onClick={event => {
-                    setBtn(true)
-                   handleRemove(event)
-                }} data-point={target}>
-                    <Close />
-                </Button>
+                {clientW > 800 ? <>
+                    <Button  onClick={ event => {
+                        setBtn(true)
+                        handleMinimize(event)}} data-point={target}>
+                        <Minimize />
+                    </Button>
+                    {
+                        btn ? (<Button onClick={(event) => {
+                            setBtn(!btn)
+                            handleMaximize(event)
+                            }} data-point={target}>
+                                <Fullscreen />
+                            </Button>) :
+                        (<Button onClick={(event) => {
+                            setBtn(!btn)
+                            handleNormalize(event)
+                            }} data-point={target}>
+                            <Screen />
+                        </Button>)
+                    }
+                    <Button  onClick={event => {
+                        setBtn(true)
+                    handleRemove(event)
+                    }} data-point={target}>
+                        <Close />
+                    </Button>
+                </> : <>
+                <Button  onPointerDown={ event => {
+                        setBtn(true)
+                        handleMinimize(event)}} data-point={target}>
+                        <Minimize />
+                    </Button>
+                    {
+                        btn ? (<Button onPointerDown={(event) => {
+                            setBtn(!btn)
+                            handleMaximize(event)
+                            }} data-point={target}>
+                                <Fullscreen />
+                            </Button>) :
+                        (<Button onPointerDown={(event) => {
+                            setBtn(!btn)
+                            handleNormalize(event)
+                            }} data-point={target}>
+                            <Screen />
+                        </Button>)
+                    }
+                    <Button  onPointerDown={event => {
+                        setBtn(true)
+                    handleRemove(event)
+                    }} data-point={target}>
+                        <Close />
+                    </Button>
+                </>}
             </div>
         </header>
         

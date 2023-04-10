@@ -51,7 +51,6 @@ export class SelectWindow{
         this.handleClick = this.handleClick.bind(this)
     }
     handleClick({currentTarget}){
-        if(currentTarget){
             document.querySelectorAll("div[data-component=window]").forEach(element =>{
                 if(element.dataset.target === currentTarget.dataset.target){
                     currentTarget.style.zIndex = 35
@@ -59,7 +58,7 @@ export class SelectWindow{
                     element.style.zIndex = 35 - 1
                 }
             })
-        }
+        
     }
     
 }
