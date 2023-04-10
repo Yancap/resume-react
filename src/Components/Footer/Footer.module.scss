@@ -9,6 +9,8 @@
     @include background-default;
     padding: 0.2rem .5rem;
     position: relative;
+    z-index: 500;
+    min-height: 35px;
 }
 
 .nav{
