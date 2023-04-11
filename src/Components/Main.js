@@ -22,7 +22,7 @@ export const Main = () => {
   return (
     <main className={styles.main}>
       <div className={styles.grid}>
-        
+          
           <MyProjects id='my-projects' data-point='my-projects' onClick={handleClick}/>
           <About id='about' data-point='about' onClick={handleClick}/>
           <Tech id='tech' data-point='tech' onClick={handleClick}/>

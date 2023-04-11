@@ -1,6 +1,6 @@
 import React from 'react'
 import react from '../../Assets/ascii-art/react.svg'
-import node from '../../Assets/ascii-art/nodejs.svg'
+import node from '../../Assets/ascii-art/node.svg'
 import js from '../../Assets/ascii-art/js.svg'
 import ts from '../../Assets/ascii-art/ts.svg'
 import bootstrap from '../../Assets/ascii-art/bootstrap.svg'
