@@ -17,7 +17,7 @@ export const WinContacts = () => {
           <form action="">
              <div className={styles.label}>
               <label htmlFor='name' >Nome</label>
-              <input id='name' autocomplete='off'/>
+              <input id='name' autoComplete='off'/>
              </div>
              <div className={styles.label}>
                 <label htmlFor='email' >Email</label>

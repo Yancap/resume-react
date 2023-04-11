@@ -21,7 +21,6 @@ import { Prompt } from './Prompt'
 
 export const WinTech = () => {
   const {handleClick, active} = React.useContext(WindowContext)
-  console.log(active);
   return (
       <>
       <Window icon={icon} path='Tecnologias' target='tech' title='Tecnologias que domino' minH='385px' minW='475px'>

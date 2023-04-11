@@ -5,16 +5,12 @@ export const WindowContext = React.createContext()
 export const WindowStorage = ({children}) => {
     const [tabs, setTabs] = React.useState(null)
     const [active, setActive] = React.useState({})
-    const time = (ms) =>{
-        return new Promise(res => setTimeout(res, ms))
-      }
+    const [max, setMax] = React.useState(true)
+    const [min, setMin] = React.useState(true)
+    
     function handleClick(event) {
         setActive({...active, [event.currentTarget.dataset.point]: true})
-        console.log(active[event.currentTarget.dataset.point]);
-        if (active[event.currentTarget.dataset.point]) {
-            let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}'`)
-            console.log(element);
-        }
+        
         if (tabs) {
             setTabs({
                 ...tabs, [event.currentTarget.dataset.point]: {
@@ -34,8 +30,9 @@ export const WindowStorage = ({children}) => {
         }   
     }
     function handleRemove(event) {
-        let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}'`)
         setActive({...active, [event.currentTarget.dataset.point]: false})
+        setMax(true)
+        setMin(true)
         if (tabs[event.currentTarget.dataset.point]) {
             delete tabs[event.currentTarget.dataset.point]
             setTabs({...tabs})
@@ -46,12 +43,14 @@ export const WindowStorage = ({children}) => {
         if(event.currentTarget.dataset.point){
             let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}']`)
             element.style.animation = 'minimizeWindow .5s forwards'
+            setMin(false)
             document.querySelector(`#tabs button[data-point='${event.currentTarget.dataset.point}']`).removeAttribute('disabled')
         }
     }
     function handleOpen(event) {
         if(event.currentTarget.dataset.point){
             let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}']`)
+            setMin(true)
             element.style.animation = 'openWindowTab .5s forwards'
             document.querySelector(`#tabs button[data-point='${event.currentTarget.dataset.point}']`).setAttribute('disabled', 'disabled')
         }
@@ -59,6 +58,8 @@ export const WindowStorage = ({children}) => {
     async function handleMaximize(event) {
         if(event.currentTarget.dataset.point){
             let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}']`)
+            setMin(true)
+            setMax(false)
             element.style.animation = 'maximizeWindow .5s forwards'
             document.querySelector(`#tabs button[data-point='${event.currentTarget.dataset.point}']`).setAttribute('disabled', 'disabled')
             
@@ -67,7 +68,8 @@ export const WindowStorage = ({children}) => {
     async function handleNormalize(event) {
         if(event.currentTarget.dataset.point){
             let element = document.querySelector(`div[data-target='${event.currentTarget.dataset.point}']`)
-            
+            setMin(true)
+            setMax(true)
             let dynamicStyles = document.createElement('style');
             document.head.appendChild(dynamicStyles)
             dynamicStyles.sheet.insertRule(`
@@ -94,7 +96,7 @@ export const WindowStorage = ({children}) => {
     }
 
   return (
-    <WindowContext.Provider value={{tabs, active ,handleClick, handleRemove, handleMinimize, handleMaximize, handleOpen, handleNormalize}}>
+    <WindowContext.Provider value={{tabs, active, max, min ,handleClick, handleRemove, handleMinimize, handleMaximize, handleOpen, handleNormalize}}>
         {children}
     </WindowContext.Provider>
   )

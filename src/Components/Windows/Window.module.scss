@@ -120,3 +120,11 @@
     
     cursor:nw-resize;
 }
+
+@media screen and (max-width: 768px) {
+    .window{
+        top: 10vh;
+        left: 5vw;
+        width: 90vw;
+    }
+}

@@ -1,0 +1,34 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.tool{
+    @include background-container;
+    height: 10vh !important;
+    width: 160px;
+    position: absolute;
+    left: 0;
+    bottom: 4.6vh;
+    box-sizing: border-box;
+    padding: 2px 4px;
+    animation: open .25s forwards;
+    @keyframes open {
+        from{
+            height: 0;
+            opacity: 0;
+        }
+        to{
+            height: 30vh;
+            opacity: 1;
+        }
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    button{
+        width: 100%;
+        height: 28px;
+    }
+}

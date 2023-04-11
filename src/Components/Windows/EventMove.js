@@ -1,5 +1,3 @@
-import React from 'react'
-import { WindowContext } from '../Context/WindowContext'
 
 export class EventMove{
     click = {x:0,y:0}

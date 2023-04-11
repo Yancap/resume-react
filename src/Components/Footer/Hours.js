@@ -4,7 +4,7 @@ import styles from './Hours.module.scss'
 export const Hours = () => {
   const [ hours, setHours ] = React.useState(null)
   const [ minutes, setMinutes ] = React.useState(null)
-  let seconds = null
+  
 
   React.useEffect(()=>{
     setInterval(()=>{

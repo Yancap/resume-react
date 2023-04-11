@@ -14,7 +14,6 @@ import python from '../../Assets/ascii-art/python.svg'
 import styles from './Prompt.module.scss'
 
 export const Prompt = ({title}) => {
-  const [tech, setTech] = React.useState(false)
   const asciiArt = {
     react, node, js, ts, bootstrap, figma, sql, sass, git, html, css, python
   }
@@ -55,7 +54,7 @@ export const Prompt = ({title}) => {
   }
   React.useEffect(()=>{
     animation()
-  },[])
+  },[animation])
 
   return (
     <div className={styles.prompt}>

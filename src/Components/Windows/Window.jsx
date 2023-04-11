@@ -12,8 +12,8 @@ import { ReactComponent as Screen } from '../../Assets/normalscreen.svg'
 import styles from './Window.module.scss'
 
 export const Window = ({icon, path, title, target, winName, ...props}) => {
-    const { handleRemove, handleMinimize, handleMaximize, handleNormalize } = React.useContext(WindowContext)
-    const [btn, setBtn] = React.useState(true)
+    const { handleRemove, handleMinimize, handleMaximize, handleNormalize, max } = React.useContext(WindowContext)
+    
     const eventMove = new EventMove()
     const selectWindow = new SelectWindow()
     const resizeWindow = new ResizeWindow()
@@ -32,55 +32,35 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
             </div>
             <div className={styles.containerBtn}>
                 {clientW > 800 ? <>
-                    <Button  onClick={ event => {
-                        setBtn(true)
-                        handleMinimize(event)}} data-point={target}>
+                    <Button  onClick={handleMinimize} data-point={target}>
                         <Minimize />
                     </Button>
                     {
-                        btn ? (<Button onClick={(event) => {
-                            setBtn(!btn)
-                            handleMaximize(event)
-                            }} data-point={target}>
+                        max ? (<Button onClick={
+                            handleMaximize} data-point={target}>
                                 <Fullscreen />
                             </Button>) :
-                        (<Button onClick={(event) => {
-                            setBtn(!btn)
-                            handleNormalize(event)
-                            }} data-point={target}>
+                        (<Button onClick={handleNormalize} data-point={target}>
                             <Screen />
                         </Button>)
                     }
-                    <Button  onClick={event => {
-                        setBtn(true)
-                    handleRemove(event)
-                    }} data-point={target}>
+                    <Button  onClick={handleRemove} data-point={target}>
                         <Close />
                     </Button>
                 </> : <>
-                <Button  onPointerDown={ event => {
-                        setBtn(true)
-                        handleMinimize(event)}} data-point={target}>
+                <Button  onPointerDown={handleMinimize} data-point={target}>
                         <Minimize />
                     </Button>
                     {
-                        btn ? (<Button onPointerDown={(event) => {
-                            setBtn(!btn)
-                            handleMaximize(event)
-                            }} data-point={target}>
+                        max ? (<Button onPointerDown={handleMaximize} data-point={target}>
                                 <Fullscreen />
                             </Button>) :
-                        (<Button onPointerDown={(event) => {
-                            setBtn(!btn)
-                            handleNormalize(event)
-                            }} data-point={target}>
+                        (<Button onPointerDown={
+                            handleNormalize} data-point={target}>
                             <Screen />
                         </Button>)
                     }
-                    <Button  onPointerDown={event => {
-                        setBtn(true)
-                    handleRemove(event)
-                    }} data-point={target}>
+                    <Button  onPointerDown={handleRemove} data-point={target}>
                         <Close />
                     </Button>
                 </>}
