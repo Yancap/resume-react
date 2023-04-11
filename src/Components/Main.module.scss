@@ -11,27 +11,13 @@
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    // position: relative;
     z-index: $z-index-grid;
     gap: 10px;
-    > div{
-        min-width: 110px;
-        min-height: 90px;
-        border-radius: 2px;
-    }
-    > div:nth-child(1){
-        grid-column: 1/2;
-        
-    }
-    > div:nth-child(3){
-        grid-column: 1/2;
-        
-    }
-    > div:nth-child(5){
-        grid-column: 1/2;
-        
+    .row{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
     }
 }
 
