@@ -33,6 +33,7 @@ export const Main = () => {
   DragDrop.init()
   return (
     <main className={styles.main}>
+     
       <div className={styles.grid}>
         <div className={styles.row}>
           <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}>
