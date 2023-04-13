@@ -2,6 +2,7 @@
 
 .screen{
     box-sizing: border-box;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     background-color: $color-primary;
@@ -11,14 +12,18 @@
     li{
         list-style: none;
     }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10%;
+    }
 }
 
 .title{
     border-width: 3px 0px;
     border-style: solid;
     border-color: #8A8EFC;
-    padding: 5px;
-
+    
     h1{
         color: #8A8EFC;
         font-family: $font-family-primary;
@@ -27,6 +32,14 @@
     strong{
         color: #8A8EFC;
         font-family: $font-family-display;
+    }
+    @media screen and (max-width: 768px) {
+        align-self: flex-start;
+        flex-shrink: 0;
+        h1{
+          font-size: 24px;  
+        }
+        
     }
 }
 
@@ -37,6 +50,12 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 8px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: min-content;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .metadata{
@@ -47,7 +66,9 @@
         letter-spacing: -0.035em;
         color: #F28AF2;
     }
-    
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .states{
@@ -70,6 +91,10 @@
         letter-spacing: -0.035em;
         color: $color-secondary;
     }
+    @media screen and (max-width: 768px) {
+        display: none;
+        
+    }
 }
 
 .coffee{
@@ -89,11 +114,18 @@
         max-width: 100%;
         width: auto;
     }
+    @media screen and (max-width: 768px) {
+        position: absolute;
+        bottom: 25px;
+    }
 }
 
 .container-load{
     align-self: center;
     width: min-content;
+    @media screen and (max-width: 768px) {
+        align-self: normal;
+    }
 }
 
 .logo{
@@ -235,6 +267,15 @@
             }
         }
     }
+    @media screen and (max-width: 768px) {
+        width: 80vw;
+        img{
+            height: auto;
+            width: 100%;
+            min-height: 40px;
+        }
+    }
+    
 }
 
 
@@ -303,6 +344,9 @@
                 100%{
                     content: "██████████";
                 }
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
             }
         }
     }

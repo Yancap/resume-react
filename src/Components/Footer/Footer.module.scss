@@ -56,9 +56,9 @@
 
 .tabs{
     display: flex;
+    overflow-x: auto;
     button{
         margin-right: 4px;
-        
     }
 }
 

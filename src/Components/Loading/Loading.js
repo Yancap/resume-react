@@ -16,11 +16,9 @@ export const Loading = () => {
             </header>
             <div className={styles.metadata}>
                 <ul>
-                    <li>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) 
-                        Chrome/111.0.0.0 Safari/537.36
-                    </li>
-                    <li>Hash: </li>
-                    <li>NoneServer: https://exemplo.netlify/</li>
+                    <li>Technologies-Used: ReactJS, SCSS, SASS-Module.</li>
+                    <li>Version: 1.0</li>
+                    <li>HostServer: https://yangabriel.netlify.app/</li>
                     <li>Kernel: Kernel (main-OFFICIAL)</li>
                     <li>Author: Yan Gabriel Ferreira</li>
                 </ul>
