@@ -50,7 +50,7 @@
     cursor:move;
     -webkit-user-drag:element;
     @media screen and (max-width: 500px) {
-        height: 26px;
+        height: 38px;
         width: 100%;
         padding: 0px;
     }
@@ -82,8 +82,8 @@
         }
     }
     @media screen and (max-width: 500px) {
-        height: 26px;
-        width: 26px;
+        height: 38px;
+        width: 38px;
         button{
             width: 100%;
             margin: 0;
@@ -112,6 +112,23 @@
     }
     @media screen and (max-width: 500px){
         margin-left: 2px;
+        div{
+            height: 100%;
+            margin-right: 4px;
+            margin-left: 2px;
+        }
+        span{
+        font-family: 'VT323';
+        font-weight: 400;
+        font-size: 22px;
+        letter-spacing: -0.035em;
+        margin-left: 4px;
+        color: $color-secondary ;
+        }
+        img{
+            height: 100%;
+            width: auto;
+        }
     }
 }
 .title{

@@ -308,7 +308,7 @@
         font-size: 32px;
         &::after{
             content: " ";
-            animation: loading 3s  1s infinite linear;
+            animation: loading 4s  1s infinite linear;
             @keyframes loading {
                 0%{
                     content: ".";
@@ -327,7 +327,7 @@
             font-family: $font-family-display;
             font-size: 32px;
             content: '';
-            animation: load 7s forwards linear;
+            animation: load 5s forwards linear;
             @keyframes load {
                 0%{
                     content: "▒▒▒▒▒▒▒▒▒▒";

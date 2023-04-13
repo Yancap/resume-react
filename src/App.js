@@ -19,7 +19,7 @@ function App() {
   React.useEffect(()=>{
     setTimeout(()=>{
       setLoad(false)
-    }, 9000)
+    }, 5000)
   }, [])
   return (
     <>
