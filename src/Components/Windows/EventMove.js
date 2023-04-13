@@ -1,3 +1,7 @@
+import React from 'react'
+
+import { WindowContext } from '../Context/WindowContext.js'
+
 
 export class EventMove{
     click = {x:0,y:0}
@@ -42,13 +46,27 @@ export class EventMove{
 }
 
 export class SelectWindow{
-    windows = []
+    
     constructor(){
         this.front = 35 
         this.back = this.front - 1
+        
         this.handleClick = this.handleClick.bind(this)
     }
-    handleClick({currentTarget}){
+    handleClick({currentTarget} , active = null){
+        if(currentTarget.dataset.point){
+            if (active && currentTarget.dataset.point in active && active[currentTarget.dataset.point]) {
+                const target = document.querySelector(`[data-target=${currentTarget.dataset.point}]`)
+                document.querySelectorAll("div[data-component=window]").forEach(element =>{
+                    if(element.dataset.target === target.dataset.target){
+                        target.style.zIndex = 35
+                    } else {
+                        element.style.zIndex = 35 - 1
+                }
+            })
+            }
+            
+        } else{
             document.querySelectorAll("div[data-component=window]").forEach(element =>{
                 if(element.dataset.target === currentTarget.dataset.target){
                     currentTarget.style.zIndex = 35
@@ -56,6 +74,8 @@ export class SelectWindow{
                     element.style.zIndex = 35 - 1
                 }
             })
+        }
+            
         
     }
     

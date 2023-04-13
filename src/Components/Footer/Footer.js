@@ -9,7 +9,7 @@ import { Tool } from './Tool'
 export const Footer = () => {
   const [active, setActive] = React.useState(false)
   const {tabs, handleOpen} = React.useContext(WindowContext)
-
+  const width = window.screen.width > 500
   function handleRight(event){
     event.preventDefault()
     document.querySelector(`[data-tool=${event.currentTarget.dataset.point}]`).style.display = 'flex'
@@ -22,34 +22,34 @@ export const Footer = () => {
     
   ))
   React.useEffect(()=>{
-    tabs && Object.keys(tabs).forEach(key =>{
-      if (document.querySelector(`div[data-target='${tabs[key].target}']`).style.visibility === 'hidden') {
-        document.querySelector(`#tabs button[data-point='${tabs[key].target}']`).removeAttribute('disabled', 'disabled')
-      } else {
-        document.querySelector(`#tabs button[data-point='${tabs[key].target}']`).setAttribute('disabled', 'disabled')
-      }
-      
-    })
+    if (width) {
+      tabs && Object.keys(tabs).forEach(key =>{
+        if (document.querySelector(`div[data-target='${tabs[key].target}']`).style.visibility === 'hidden') {
+          document.querySelector(`#tabs button[data-point='${tabs[key].target}']`).removeAttribute('disabled', 'disabled')
+        } else {
+          document.querySelector(`#tabs button[data-point='${tabs[key].target}']`).setAttribute('disabled', 'disabled')
+        }
+      })
+    }
   }, [tabs])
-  
   
   function handleButton({currentTarget}){
     setActive(!active)
     currentTarget.toggleAttribute('disabled')
   }
+
   return (
     <footer className={styles.footer}>
         <nav className={styles.nav}>
             <div className={styles.containerApps}>
               <div className={styles.start}>
-                {active && <Menu/>}
+                {width ? active && <Menu/> : <Menu mobile />}
                 <Button text='Start' icon='X' onClick={handleButton}/>
               </div>
-              <div className={styles.tabs} id='tabs'>
-                
-                {tabs && <>{keys.map(element => element)}</>}
-                
-              </div>
+              {width && 
+                <div className={styles.tabs} id='tabs'>
+                  {tabs && <>{keys.map(element => element)}</>}
+                </div>}
             </div>
             <div className={styles.containerHours}>
               <Hours />

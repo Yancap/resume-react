@@ -7,6 +7,10 @@
     padding: 35px;
     position: relative;
     background: $bg-default;
+    @media screen and (max-width: 500px) {
+        height: 70vh;
+        width: 100vw;
+    }
 }
 .grid{
     display: grid;
@@ -34,6 +38,6 @@
 
 @media screen and (max-width: 500px){
     .main{
-        padding: 15px;
+        padding: 0;
     }
 }

@@ -15,4 +15,7 @@
       height: 110px;
       width: 90px;
    }
+   @media screen and (max-width: 500px) {
+      height: calc(100% - 22px);
+   }
 }

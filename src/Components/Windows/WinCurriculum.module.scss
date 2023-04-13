@@ -3,6 +3,9 @@
 
 .container{
     height: calc($height-window-content - 14px);
+    @media screen and (max-width: 500px) {
+        height: calc(100% - 76px);
+    }
 }
 
 .window{
@@ -17,6 +20,7 @@
     flex-direction: column;
     gap: 24px;
     align-items: start;
+
  }
 
  .download{

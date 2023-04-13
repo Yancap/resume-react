@@ -19,16 +19,31 @@ export const Program = ({icon, text, path, github, setLink, handleClick, ...prop
     function mouseOut({currentTarget}){
         currentTarget.removeAttribute('active')
     }
-  return (
-    <div className={styles.project} onMouseOut={mouseOut} onDoubleClick={handleClick ? handleClick : open} data-path={path} {...props}>
-      <div className={styles.icon}>
-        <img src={icon} />
+    const clientW = window.screen.width
+    if (clientW > 500) {
+      return (
+        <div className={styles.project} onMouseOut={mouseOut} onDoubleClick={handleClick ? handleClick : open} data-path={path} {...props}>
+          <div className={styles.icon}>
+            <img src={icon} />
+          </div>
+          <div className={styles.text}>
+            <div className={styles.overlay}></div>
+            <span>{text}</span>
+          </div>
+          <div className={styles.overlay}></div>
       </div>
-      <div className={styles.text}>
+      )
+    }
+    return (
+      <div className={styles.project} onMouseOut={mouseOut} onPointerDown={handleClick ? handleClick : open} data-path={path} {...props}>
+        <div className={styles.icon}>
+          <img src={icon} />
+        </div>
+        <div className={styles.text}>
+          <div className={styles.overlay}></div>
+          <span>{text}</span>
+        </div>
         <div className={styles.overlay}></div>
-        <span>{text}</span>
-      </div>
-      <div className={styles.overlay}></div>
-  </div>
-  )
+    </div>
+    )
 }

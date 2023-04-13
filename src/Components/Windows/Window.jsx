@@ -20,9 +20,13 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
     eventMove.init()
     resizeWindow.init()
     const clientW = window.screen.width
+    if (clientW <= 500) {
+        props.minH = '100%'
+        props.minW = '100%'
+    }
   return (
     <div data-component='window' data-target={target} onPointerDown={selectWindow.handleClick}
-    {...props} className={styles.window} style={{minHeight: props.minH, minWidth: props.minW}}>
+    {...props} className={styles.window} style={ clientW > 500 ? {minHeight: props.minH, minWidth: props.minW} : {}}>
         <header  draggable onDrag={eventMove.handleDown} onDragEnd={eventMove.handleUp} className={styles.header}>
             <div className={styles.containerSpan}>
                 <div>
@@ -47,7 +51,9 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
                     <Button  onClick={handleRemove} data-point={target}>
                         <Close />
                     </Button>
-                </> : <>
+                </> 
+                : clientW > 500 ?
+                <>
                 <Button  onPointerDown={handleMinimize} data-point={target}>
                         <Minimize />
                     </Button>
@@ -63,7 +69,11 @@ export const Window = ({icon, path, title, target, winName, ...props}) => {
                     <Button  onPointerDown={handleRemove} data-point={target}>
                         <Close />
                     </Button>
-                </>}
+                </> : 
+                <Button  onPointerDown={handleRemove} data-point={target}>
+                        <Close />
+                </Button>
+                }
             </div>
         </header>
         

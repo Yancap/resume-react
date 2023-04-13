@@ -20,6 +20,20 @@
             opacity: 1;
         }
     }
+    @media screen and (max-width: 500px) {
+        box-sizing: border-box;
+        position: relative;
+        left: initial;
+        bottom: initial;
+        height: 100%;
+        width: 100%;
+        animation: none;
+        padding: 10px;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-top: 3px solid #FFFFFF;
+    }
 }
 
 
@@ -55,6 +69,28 @@
         span{
             color: #fff !important;
         }
+        
     }
-
+    @media screen and (max-width: 500px) {
+        box-sizing: border-box;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+        height: 100%;
+        > div{
+            @include background-container;
+            background-color: #8F8ECD;
+            padding: 2px 4px;
+            position: relative;
+            span{
+                position: absolute;
+                z-index: 100;
+            }
+            &:hover{
+                background-color: #21225B;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
 }
