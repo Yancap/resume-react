@@ -23,6 +23,11 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: 10px;
+        @media screen and (max-width: 500px) {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
     }
 }
 
@@ -38,6 +43,6 @@
 
 @media screen and (max-width: 500px){
     .main{
-        padding: 0;
+        padding: 35px;
     }
 }

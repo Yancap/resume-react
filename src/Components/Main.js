@@ -30,10 +30,10 @@ export const Main = () => {
       this.handleDrop = this.handleDrop.bind(this)
     }
   }
+  const clientX = window.screen.width
   DragDrop.init()
   return (
     <main className={styles.main}>
-     
       <div className={styles.grid}>
         <div className={styles.row}>
           <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}>
@@ -42,16 +42,21 @@ export const Main = () => {
           <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}>
             <About id='about' data-point='about' handleDrag={DragDrop.handleDrag} onClick={handleClick}/>
           </div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+          {
+            clientX > 600 &&
+            <>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+            </>
+          }
         </div>
 
         <div className={styles.row}>
@@ -61,16 +66,21 @@ export const Main = () => {
           <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}>
             <Contact id='contact' data-point='contact' handleDrag={DragDrop.handleDrag} onClick={handleClick}/>
           </div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+          {
+            clientX > 600 &&
+            <>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+            </>
+          }
         </div>
         <div className={styles.row}>
           <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}>
@@ -79,59 +89,70 @@ export const Main = () => {
           <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}>
             <Curriculum id='curriculum' data-point='curriculum' handleDrag={DragDrop.handleDrag} onClick={handleClick}/>
           </div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+          {
+            clientX > 600 &&
+            <>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+            </>
+          }
         </div>
-        <div className={styles.row}>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-        </div>
-        <div className={styles.row}>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-        </div>
-        <div className={styles.row}>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-          <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
-        </div>
+        {
+            clientX > 600 &&
+            <>
+              <div className={styles.row}>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+            </div>
+            <div className={styles.row}>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+            </div>
+            <div className={styles.row}>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+              <div onDrop={DragDrop.handleDrop} onDragOver={(e) => e.preventDefault()}></div>
+            </div>
+            </>
+          }
+        
           {active['my-projects'] && <WinProject />}
           {active.about && <WinAbout /> }
           {active.tech && <WinTech />}
