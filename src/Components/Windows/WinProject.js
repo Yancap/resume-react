@@ -9,9 +9,11 @@ import pizzascript from '../../Assets/project/pizza.png'
 import loginNode from '../../Assets/project/login-node.png'
 import blog from '../../Assets/project/notepad.png'
 import py from '../../Assets/tech/python.png'
+import js from '../../Assets/tech/js.png'
 import fox from '../../Assets/project/fox.png'
 import fbit from '../../Assets/project/fbit.svg'
 import fbtech from '../../Assets/project/fbtech.svg'
+import show from '../../Assets/project/show-do-milhao.png'
 
 export const WinProject = () => {
   const [link, setLink] = React.useState()
@@ -51,10 +53,12 @@ export const WinProject = () => {
           <Program icon={py} text='Sistema de Login com Python.py' github='https://github.com/Yancap/sistema-de-login-python' setLink={setLink}/>
           <Program icon={py} text='Simulador de Banco em Python.py' github='https://github.com/Yancap/Simulador-de-Banco-em-Python' setLink={setLink}/>
           <Program icon={fox} text='Site Animais Fantasticos.html' github='https://github.com/Yancap/site-animais-projeto-origamid' setLink={setLink}/>
+          <Program icon={js} text='Jogo da Memoria' github='https://github.com/Yancap/Jogo-da-Memoria-com-JavaScript/tree/main' path='https://yan-resume.netlify.app/projects/jogo%20da%20memoria%20js/gamem' setLink={setLink}/>
+          <Program icon={js} text='Jogo da Velha' github='https://github.com/Yancap/Jogo-da-Velha-com-Javascript/tree/main' path='https://yan-resume.netlify.app/projects/jogo%20da%20velha%20com%20js/gamev' setLink={setLink}/>
           <Program icon={fbit} text='Site da Incubadora FB1T.html' path='https://yan-resume.netlify.app/projects/startup_fbit/' setLink={setLink}/>
           <Program icon={fbtech} text='Site da Incubadora FB1T.html' path='https://yan-resume.netlify.app/projects/site%20da%20incubadora%20(rev%2029)/index.html' setLink={setLink}/>
-
-            
+          <Program icon={py} text='Search Engine com Python.py' github='https://github.com/Yancap/Trabalho-Final-do-Modulo-de-Analise-de-Dados/tree/main' setLink={setLink}/>
+          <Program icon={show} text='Jogo Show do Milhão em C.ccp' github='https://github.com/Yancap/show-do-milhao-C' setLink={setLink}/>  
         </div>
       </Window>
     
