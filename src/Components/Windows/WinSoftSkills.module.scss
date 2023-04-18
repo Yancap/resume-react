@@ -1,0 +1,40 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.window{
+    @include window-content;
+    margin-top: 2px;
+    height: calc($height-window-content - 8px);
+    display: flex;
+    gap:22px 18px;
+    flex-wrap: wrap;
+     > div{
+       height: 120px;
+       width: 150px;
+    }
+    @media screen and (max-width: 500px) {
+     height: calc($height-window-content - 8px);
+     }
+ }
+
+ .skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    img{
+        max-width: 50%;
+        height: auto;
+        max-height: 80%;
+    }
+    span{
+      font-family: $font-family-primary;
+      color: black;  
+      font-size: 28px;
+      display: block;
+      height: 20%;
+
+    }
+    
+ }
