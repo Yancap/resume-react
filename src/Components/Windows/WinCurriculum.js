@@ -23,10 +23,14 @@ export const WinCurriculum = () => {
             <section className={styles.content}>
               <h2 className={styles.title}>RESUMO DAS QUALIFICAÇÕES</h2>
               <p className={styles.paragraph}>
-                Busco minha inserção no mercado de trabalho, com objetivo de desenvolver minhas competências
-                técnicas e comportamentais, focando em trazer resultado para empresa e equipe. Das habilidades
-                que pude desenvolver na minha trajetória acadêmica e de vida, destaco proatividade, adaptabilidade, 
-                boa capacidade analítica e liderança.
+              Olá, me chamo Yan Gabriel Ferreira e busco minha inserção no mercado de trabalho 
+           na área de tecnologia, com o objetivo de desenvolver suas 
+           competências técnicas e comportamentais. Com grande paixão por 
+           tecnologia e aprendizado contínuo, me destaco pela habilidades 
+           comportamentais, como autodidata, proatividade, adaptabilidade, boa capacidade 
+           analítica e liderança. Buscando sempre me atualizar nas tecnologias 
+           que me interessam, sou empenhado em aprimorar meus 
+           conhecimentos técnicos e contribuir para o crescimento das empresas em que atuar.
               </p>
             </section>
             
@@ -43,7 +47,7 @@ export const WinCurriculum = () => {
               <h2 className={styles.title}>FORMAÇÃO ACADÊMICA</h2>
               <h3 className={styles.subtitle}>Técnico em Desenvolvimento de Sistemas - em Curso</h3>
               <p className={styles.paragraph}>
-              Fundação Bradesco | 2022 - 2024
+              Fundação Bradesco | 03/2022 - 06/2024
               </p>
             </section>
 
@@ -56,12 +60,14 @@ export const WinCurriculum = () => {
                   <li className={styles.paragraph}>BOOTSTRAP - Avançado</li>
                   <li className={styles.paragraph}>PYTHON - Avançado</li>
                   <li className={styles.paragraph}>Ui Design / Figma - Intermediário</li>
+                  <li className={styles.paragraph}>Tailwind - Básico</li>
                 </div>
                 <div>
-                  <li className={styles.paragraph}>REACTJS - Intermediário</li>
+                  <li className={styles.paragraph}>REACTJS - Avançado</li>
                   <li className={styles.paragraph}>NODEJS/Express - Intermediário</li>
+                  <li className={styles.paragraph}>API RESTFUL - Intermediário</li>
                   <li className={styles.paragraph}>SQL - Intermediário</li>
-                  <li className={styles.paragraph}>TYPESCRIPT - Básico</li>
+                  <li className={styles.paragraph}>TYPESCRIPT - Intermediário</li>
                   <li className={styles.paragraph}>PHP - Básico</li>
                 </div>
               </div>
@@ -88,12 +94,14 @@ export const WinCurriculum = () => {
 
             <section className={styles.content}>
               <h2 className={styles.title}>CURSOS REALIZADOS</h2>
-              <li className={styles.paragraph}>Curso HTML5, CSS3, Javascript Avançado - Completo - Origamid</li>
+              <li className={styles.paragraph}>Curso HTML5, CSS3, Javascript - Completo - Origamid</li>
               <li className={styles.paragraph}>Curso de Ui Design - Completo - Origamid</li>
               <li className={styles.paragraph}>Curso de ReactJS - Completo - Origamid</li>
-              <li className={styles.paragraph}>Curso de NodeJs/Express - Em Curso - Rocketseat Explorer</li>
-              <li className={styles.paragraph}>Curso de Typescript para Iniciantes- Completo - Origamid</li>
-              <li className={styles.paragraph}>Curso de PHP - Em Curso - Upinside</li>
+              <li className={styles.paragraph}>Curso de NodeJs/Express - Completo - Rocketseat Explorer</li>
+              <li className={styles.paragraph}>Curso de Typescript - Completo - Origamid</li>
+              <li className={styles.paragraph}>Curso de Tailwind - Em Curso - Hora de Codar</li>
+              <li className={styles.paragraph}>Curso de React/NextJS - Em Curso - Rocketseat Ignite</li>
+              <li className={styles.paragraph}>Curso de Node/TS - Em Curso - Rocketseat Ignite</li>
             </section>
 
             <section className={styles.content}>
