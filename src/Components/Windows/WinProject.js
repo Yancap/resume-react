@@ -14,6 +14,7 @@ import fox from '../../Assets/project/fox.png'
 import fbit from '../../Assets/project/fbit.svg'
 import fbtech from '../../Assets/project/fbtech.svg'
 import show from '../../Assets/project/show-do-milhao.png'
+import ymoney from '../../Assets/project/ymoney.png'
 
 export const WinProject = () => {
   const [link, setLink] = React.useState()
@@ -50,6 +51,7 @@ export const WinProject = () => {
           <Program icon={pizzascript} text='Projeto Pizzaria com ReactJs.url' path='https://pizzascript.netlify.app/' github='https://github.com/Yancap/pizzaria-react' setLink={setLink}/>
           <Program icon={loginNode} text='Sistema de Login com Node e React' path='https://login-node-react.netlify.app/' github='https://github.com/Yancap/projeto-login-node-react' setLink={setLink}/>
           <Program icon={blog} text='Pagina de Artigos' github='Em Produção!!!' setLink={setLink}/>
+          <Program icon={ymoney} text='Controle de Finanças Pessoais' path='https://ymoney.netlify.app/' github='https://github.com/Yancap/projeto-controle-de-financas-server' setLink={setLink}/>
           <Program icon={py} text='Sistema de Login com Python.py' github='https://github.com/Yancap/sistema-de-login-python' setLink={setLink}/>
           <Program icon={py} text='Simulador de Banco em Python.py' github='https://github.com/Yancap/Simulador-de-Banco-em-Python' setLink={setLink}/>
           <Program icon={fox} text='Site Animais Fantasticos.html' github='https://github.com/Yancap/site-animais-projeto-origamid' setLink={setLink}/>
