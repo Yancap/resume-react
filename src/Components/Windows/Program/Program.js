@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Program.module.scss'
 
+
 export const Program = ({icon, text, path, github, setLink, handleClick, ...props}) => {
     
     function open({currentTarget}){
@@ -22,7 +23,14 @@ export const Program = ({icon, text, path, github, setLink, handleClick, ...prop
     const clientW = window.screen.width
     if (clientW > 500) {
       return (
-        <div className={styles.project} onMouseOut={mouseOut} onDoubleClick={handleClick ? handleClick : open} data-path={path} {...props}>
+        <div 
+        className={styles.project} 
+        onMouseOut={mouseOut} 
+        onDoubleClick={handleClick ? handleClick : open} 
+        data-path={path} 
+        onPointerOver={() => props.setTech ? props.setTech(props.tech) : null} 
+        onPointerOut={() => props.setTech(null)}
+        {...props}>
           <div className={styles.icon}>
             <img src={icon} />
           </div>
@@ -35,7 +43,9 @@ export const Program = ({icon, text, path, github, setLink, handleClick, ...prop
       )
     }
     return (
-      <div className={styles.project} onMouseOut={mouseOut} onPointerDown={handleClick ? handleClick : open} data-path={path} {...props}>
+      <div className={styles.project} onMouseOut={mouseOut} 
+      onPointerDown={handleClick ? handleClick : open} 
+      data-path={path} {...props} onPointerOver={() => console.log('a')}>
         <div className={styles.icon}>
           <img src={icon} />
         </div>

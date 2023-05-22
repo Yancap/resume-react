@@ -1,0 +1,29 @@
+@import '../../Sass/mixins';
+@import '../../Sass/variables';
+
+.container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    position: absolute;
+    bottom: 0;
+    background-color: lighten($bg-container-primary, 10);
+    opacity: .95;
+    border-radius: .25rem;
+    z-index: 1000 !important;
+    padding: .5rem;
+    h6{
+        font-size: 14px;
+        color: black;
+    }
+    img{
+        width: auto;
+        height: 1.75rem;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+}
