@@ -51,18 +51,18 @@ export const WinProject = () => {
         </nav>
         <div className={styles.window}>
           <Program tech='React Node js css rest' setTech={setTech} icon={pizzascript} text='Projeto Pizzaria com ReactJs.url' path='https://pizzascript.netlify.app/' github='https://github.com/Yancap/pizzaria-react' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={loginNode} text='Sistema de Login com Node e React' path='https://login-node-react.netlify.app/' github='https://github.com/Yancap/projeto-login-node-react' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={blog} text='Pagina de Artigos'  path='https://artech-blog.netlify.app/' github='https://github.com/Yancap/projeto-blog-client' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={ymoney} text='Controle de Finanças Pessoais' path='https://ymoney.netlify.app/' github='https://github.com/Yancap/projeto-controle-de-financas-server' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={py} text='Sistema de Login com Python.py' github='https://github.com/Yancap/sistema-de-login-python' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={py} text='Simulador de Banco em Python.py' github='https://github.com/Yancap/Simulador-de-Banco-em-Python' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={fox} text='Site Animais Fantasticos.html' github='https://github.com/Yancap/site-animais-projeto-origamid' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={js} text='Jogo da Memoria' github='https://github.com/Yancap/Jogo-da-Memoria-com-JavaScript/tree/main' path='https://yan-resume.netlify.app/projects/jogo%20da%20memoria%20js/gamem' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={js} text='Jogo da Velha' github='https://github.com/Yancap/Jogo-da-Velha-com-Javascript/tree/main' path='https://yan-resume.netlify.app/projects/jogo%20da%20velha%20com%20js/gamev' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={fbit} text='Site da Incubadora FB1T.html' path='https://yan-resume.netlify.app/projects/startup_fbit/' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={fbtech} text='Site da Incubadora FB1T.html' path='https://yan-resume.netlify.app/projects/site%20da%20incubadora%20(rev%2029)/index.html' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={py} text='Search Engine com Python.py' github='https://github.com/Yancap/Trabalho-Final-do-Modulo-de-Analise-de-Dados/tree/main' setLink={setLink}/>
-          <Program tech='' setTech={setTech} icon={show} text='Jogo Show do Milhão em C.ccp' github='https://github.com/Yancap/show-do-milhao-C' setLink={setLink}/>  
+          <Program tech='React Node sql js css rest' setTech={setTech} icon={loginNode} text='Sistema de Login com Node e React' path='https://login-node-react.netlify.app/' github='https://github.com/Yancap/projeto-login-node-react' setLink={setLink}/>
+          <Program tech='React Node css_js sql js ts css rest' setTech={setTech} icon={blog} text='Pagina de Artigos'  path='https://artech-blog.netlify.app/' github='https://github.com/Yancap/projeto-blog-client' setLink={setLink}/>
+          <Program tech='React Node css_js sql js ts css rest' setTech={setTech} icon={ymoney} text='Controle de Finanças Pessoais' path='https://ymoney.netlify.app/' github='https://github.com/Yancap/projeto-controle-de-financas-server' setLink={setLink}/>
+          <Program tech='python' setTech={setTech} icon={py} text='Sistema de Login com Python.py' github='https://github.com/Yancap/sistema-de-login-python' setLink={setLink}/>
+          <Program tech='python mysql' setTech={setTech} icon={py} text='Simulador de Banco em Python.py' github='https://github.com/Yancap/Simulador-de-Banco-em-Python' setLink={setLink}/>
+          <Program tech='css js' setTech={setTech} icon={fox} text='Site Animais Fantasticos.html' github='https://github.com/Yancap/site-animais-projeto-origamid' setLink={setLink}/>
+          <Program tech='css js' setTech={setTech} icon={js} text='Jogo da Memoria' github='https://github.com/Yancap/Jogo-da-Memoria-com-JavaScript/tree/main' path='https://yan-resume.netlify.app/projects/jogo%20da%20memoria%20js/gamem' setLink={setLink}/>
+          <Program tech='css js' setTech={setTech} icon={js} text='Jogo da Velha' github='https://github.com/Yancap/Jogo-da-Velha-com-Javascript/tree/main' path='https://yan-resume.netlify.app/projects/jogo%20da%20velha%20com%20js/gamev' setLink={setLink}/>
+          <Program tech='bootstrap css js ' setTech={setTech} icon={fbit} text='Site da Startup FB1T.html' path='https://yan-resume.netlify.app/projects/startup_fbit/' setLink={setLink}/>
+          <Program tech='css js' setTech={setTech} icon={fbtech} text='Site da Incubadora Fbtech.html' path='https://yan-resume.netlify.app/projects/site%20da%20incubadora%20(rev%2029)/index.html' setLink={setLink}/>
+          <Program tech='python js css' setTech={setTech} icon={py} text='Search Engine com Python.py' github='https://github.com/Yancap/Trabalho-Final-do-Modulo-de-Analise-de-Dados/tree/main' setLink={setLink}/>
+          <Program tech='c' setTech={setTech} icon={show} text='Jogo Show do Milhão em C.ccp' github='https://github.com/Yancap/show-do-milhao-C' setLink={setLink}/>  
         </div>
         <TechHover tech={tech}/>
       </Window>

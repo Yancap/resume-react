@@ -13,9 +13,12 @@ import git from '../../../Assets/tech/git.png'
 import css from '../../../Assets/tech/html-css.png'
 import css_js from '../../../Assets/tech/styled-components.png'
 import python from '../../../Assets/tech/python.png'
+import mysql from '../../../Assets/tech/mysql.png'
+import c from '../../../Assets/tech/C.png'
+
 
 export const TechHover = ({tech}) => {
-  const images = {react, rest, node, js, ts, bootstrap, figma, sql, sass, git, css, css_js, python}
+  const images = {react, rest, node, js, ts, bootstrap, figma, sql, sass, git, css, css_js, python, mysql, c}
   if (tech){
     tech = (tech.toLowerCase()).split(" ")
     return (
