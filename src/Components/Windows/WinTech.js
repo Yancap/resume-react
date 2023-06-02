@@ -15,6 +15,10 @@ import python from '../../Assets/tech/python.png'
 import html from '../../Assets/tech/html-css.png'
 import figma from '../../Assets/tech/figma.png'
 import bootstrap from '../../Assets/tech/bootstrap.png'
+import tailwind from '../../Assets/tech/tailwind.png'
+import nextjs from '../../Assets/tech/nextjs.png'
+import csharp from '../../Assets/tech/csharp.png'
+
 import { WindowContext } from '../Context/WindowContext'
 import { Prompt } from './Prompt'
 
@@ -37,6 +41,9 @@ export const WinTech = () => {
           <Program icon={html} text='HTML/CSS'  data-point='html' data-desktop='html' handleClick={handleClick}/>
           <Program icon={figma} text='FIGMA'  data-point='figma' data-desktop='figma' handleClick={handleClick}/>
           <Program icon={bootstrap} text='BOOTSTRAP'  data-point='bootstrap' data-desktop='bootstrap' handleClick={handleClick}/>
+          <Program icon={tailwind} text='TAILWIND'  data-point='tailwind' data-desktop='tailwind' handleClick={handleClick}/>
+          <Program icon={nextjs} text='NEXT JS'  data-point='nextjs' data-desktop='nextjs' handleClick={handleClick}/>
+          <Program icon={csharp} text='C#'  data-point='csharp' data-desktop='csharp' handleClick={handleClick}/>
         </div>
       </Window>
           {active.react && 
@@ -81,6 +88,15 @@ export const WinTech = () => {
           </Window>}
           {active.sql && <Window icon={icon} target='sql' minH='285px' minW='405px'>
               <Prompt title='sql'/>
+          </Window>}
+          {active.tailwind && <Window icon={icon} target='tailwind' minH='285px' minW='405px'>
+              <Prompt title='tailwind'/>
+          </Window>}
+          {active.nextjs && <Window icon={icon} target='nextjs' minH='285px' minW='405px'>
+              <Prompt title='nextjs'/>
+          </Window>}
+          {active.csharp && <Window icon={icon} target='csharp' minH='285px' minW='405px'>
+              <Prompt title='csharp'/>
           </Window>}
       </>
       

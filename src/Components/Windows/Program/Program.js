@@ -29,7 +29,7 @@ export const Program = ({icon, text, path, github, setLink, handleClick, ...prop
         onDoubleClick={handleClick ? handleClick : open} 
         data-path={path} 
         onPointerOver={() => props.setTech ? props.setTech(props.tech) : null} 
-        onPointerOut={() => props.setTech(null)}
+        onPointerOut={() =>  props.setTech && props.setTech(null)}
         {...props}>
           <div className={styles.icon}>
             <img src={icon} />

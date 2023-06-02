@@ -11,11 +11,18 @@ import git from '../../Assets/ascii-art/git.png'
 import html from '../../Assets/ascii-art/html-css.png'
 import css from '../../Assets/ascii-art/css-in-js.png'
 import python from '../../Assets/ascii-art/python.png'
+import tailwind from '../../Assets/ascii-art/tailwind.png'
+import nextjs from '../../Assets/ascii-art/nextjs.png'
+import csharp from '../../Assets/ascii-art/csharp.png'
+
+
 import styles from './Prompt.module.scss'
 
 export const Prompt = ({title}) => {
   const asciiArt = {
-    react, node, js, ts, bootstrap, figma, sql, sass, git, html, css, python
+    react, node, js, ts, bootstrap, figma, sql, sass, git, html, css, python,
+    tailwind, nextjs, csharp
+
   }
   const content = {
     react: ['Fundamentos do JSX', 'Components', 'Hooks', 'Context', 'React Routes', 
@@ -38,7 +45,10 @@ export const Prompt = ({title}) => {
     'Grid-Layout', 'Animações', 'Media Queries', ' Pseudo-Classes', 'Pseudo-Elementos', 'Variáveis'], 
     css: ['Estilização de Componentes Reacts utilizando o Styled-Components'], 
     python: ['Sintaxe Básica', 'Estruturas de Dados', 'Lambdas', 'Operador Ternário', 'Compreensão de Listas e Dicionários', 
-    'Geradores', 'Decoradores', 'Orientação a Objetos', 'Tratamento de Arquivos', 'Try and Exceptions', 'Conexão com MySQL', 'ORM SQLalchemy']
+    'Geradores', 'Decoradores', 'Orientação a Objetos', 'Tratamento de Arquivos', 'Try and Exceptions', 'Conexão com MySQL', 'ORM SQLalchemy'],
+    tailwind: ['Apply', 'Custom', 'Estilização de uma pagina utilizando suas classes', 'Utility First', 'Themes'], 
+    nextjs: ['SSR', 'SSG', 'API Routes', 'Next Auth', 'Next Routers'], 
+    csharp: ['Fundamentos', 'Lógica de Programação', 'Classes e Métodos', 'Programação Orientadas a Objetos']
   }
   const time = (ms) =>{
     return new Promise(res => setTimeout(res, ms))

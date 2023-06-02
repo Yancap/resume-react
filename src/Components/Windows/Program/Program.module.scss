@@ -47,13 +47,14 @@
 
 .icon{
     width: 70px;
-    height: 65px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     img{
-        max-width: 90%;
-        height: auto;
+        width: auto;
+        height: 90%;
     }
 }
 
