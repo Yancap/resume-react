@@ -26,7 +26,7 @@ export const Program = ({icon, text, path, github, setLink, handleClick, ...prop
         <div 
         className={styles.project} 
         onMouseOut={mouseOut} 
-        onDoubleClick={handleClick ? handleClick : open} 
+        onClick={handleClick ? handleClick : open} 
         data-path={path} 
         onPointerOver={() => props.setTech ? props.setTech(props.tech) : null} 
         onPointerOut={() =>  props.setTech && props.setTech(null)}

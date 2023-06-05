@@ -8,7 +8,7 @@ export const About = ({id, onClick, handleDrag, ...props}) => {
   const clientW = window.screen.width
   return (
     clientW > 800 ? 
-    <div id={id} onDoubleClick={onClick} {...props} draggable data-desk onDrag={handleDrag} >
+    <div id={id} onClick={onClick} {...props} draggable data-desk onDrag={handleDrag} >
       <Struct text='Sobre mim' icon={icon} target={id}/>
     </div>
     :

@@ -6,7 +6,7 @@ export const SoftSkills = ({id,onClick, handleDrag, ...props}) => {
   const clientW = window.screen.width
   return (
     clientW > 800 ? 
-    <div id={id} onDoubleClick={onClick} draggable onDrag={handleDrag} data-desk {...props}>
+    <div id={id} onClick={onClick} draggable onDrag={handleDrag} data-desk {...props}>
       <Struct text='Soft skills' icon={icon} target={id}/>
     </div>
     :
