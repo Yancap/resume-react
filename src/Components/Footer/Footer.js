@@ -5,9 +5,11 @@ import styles from './Footer.module.scss'
 import { Hours } from './Hours'
 import { Menu } from './Menu'
 import { Tool } from './Tool'
+import { Modal } from './ModalFooter/Modal'
 
 export const Footer = () => {
   const [active, setActive] = React.useState(false)
+  const [modal, setModal] = React.useState(false)
   const {tabs, handleOpen} = React.useContext(WindowContext)
   const width = window.screen.width > 500
   function handleRight(event){
@@ -31,6 +33,9 @@ export const Footer = () => {
         }
       })
     }
+    setTimeout(()=>{
+      setModal(true)
+    }, 4000)
   }, [tabs])
   
   function handleButton({currentTarget}){
@@ -55,6 +60,8 @@ export const Footer = () => {
               <Hours />
             </div>
         </nav>
+        {modal && <Modal />}
+        
     </footer>
   )
 }

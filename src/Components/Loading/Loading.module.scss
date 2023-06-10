@@ -327,7 +327,7 @@
             font-family: $font-family-display;
             font-size: 32px;
             content: '';
-            animation: load 5s forwards linear;
+            animation: load 3s forwards linear;
             @keyframes load {
                 0%{
                     content: "▒▒▒▒▒▒▒▒▒▒";

@@ -1,0 +1,49 @@
+@import '../Sass/mixins';
+@import '../Sass/variables';
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 160px;
+    width: 400px;
+    @include background-default;
+    flex-direction: column;
+    z-index: $z-index-window;
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    animation-name: timeModal;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    display: flex;
+    @keyframes timeModal {
+        from{
+            opacity: 1;
+        } to{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    p, h3, a{
+        font-family: $font-family-primary;
+        
+    }
+    h3{
+        color: $color-primary;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    p{
+        color: #403c55;
+    }
+    a{
+        margin-left: .25rem;
+        color: $color-primary;
+        font-size: 1.2rem;
+    }
+    
+}
