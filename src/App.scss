@@ -7,6 +7,12 @@
     color: white;
 }
 
+html{
+    @media screen and (max-width: 400px) {
+        font-size: 14px;
+    }
+}
+
 body{
     background: $color-primary;
     height: 100vh;
