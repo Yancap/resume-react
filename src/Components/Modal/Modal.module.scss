@@ -17,13 +17,17 @@
     justify-content: space-around;
     text-align: center;
     animation-name: timeModal;
-    animation-duration: 6s;
+    animation-duration: 10s;
     animation-fill-mode: forwards;
     display: flex;
     @keyframes timeModal {
-        from{
+        0%{
             opacity: 1;
-        } to{
+        } 
+        50%{
+            opacity: 1;
+        }
+        100%{
             opacity: 0;
             visibility: hidden;
         }

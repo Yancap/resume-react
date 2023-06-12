@@ -35,7 +35,7 @@ export const Footer = () => {
     }
     setTimeout(()=>{
       setModal(true)
-    }, 4000)
+    }, 10000)
   }, [tabs])
   
   function handleButton({currentTarget}){

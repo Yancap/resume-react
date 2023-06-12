@@ -21,14 +21,9 @@
         opacity: 1;
     }
    
-    p, h3, a{
+    p, a{
         font-family: $font-family-primary;
         
-    }
-    h3{
-        color: $color-primary;
-        font-size: 1.5rem;
-        font-weight: 500;
     }
     p{
         color: #403c55;
@@ -42,5 +37,7 @@
             transform: scale(1.05);
         }
     }
-    
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
 }
