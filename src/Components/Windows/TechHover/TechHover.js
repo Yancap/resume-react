@@ -15,10 +15,14 @@ import css_js from '../../../Assets/tech/styled-components.png'
 import python from '../../../Assets/tech/python.png'
 import mysql from '../../../Assets/tech/mysql.png'
 import c from '../../../Assets/tech/C.png'
-
+import tailwindcss from '../../../Assets/tech/tailwind.png'
+import nextjs from '../../../Assets/tech/nextjs.png'
 
 export const TechHover = ({tech}) => {
-  const images = {react, rest, node, js, ts, bootstrap, figma, sql, sass, git, css, css_js, python, mysql, c}
+  const images = {
+    react, rest, node, js, ts, bootstrap, 
+    figma, sql, sass, git, css, css_js, python, 
+    mysql, c, tailwindcss, nextjs}
   if (tech){
     tech = (tech.toLowerCase()).split(" ")
     return (

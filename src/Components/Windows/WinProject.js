@@ -7,6 +7,7 @@ import home from '../../Assets/home.svg'
 import { Program } from './Program/Program'
 import pizzascript from '../../Assets/project/pizza.png'
 import loginNode from '../../Assets/project/login-node.png'
+import spotify from '../../Assets/project/spotify.png'
 import blog from '../../Assets/project/notepad.png'
 import py from '../../Assets/tech/python.png'
 import js from '../../Assets/tech/js.png'
@@ -52,6 +53,7 @@ export const WinProject = () => {
         <div className={styles.window}>
           <Program tech='React Node js css rest' setTech={setTech} icon={pizzascript} text='Projeto Pizzaria com ReactJs.url' path='https://pizzascript.netlify.app/' github='https://github.com/Yancap/pizzaria-react' setLink={setLink}/>
           <Program tech='React Node sql js css rest' setTech={setTech} icon={loginNode} text='Sistema de Login com Node e React' path='https://login-node-react.netlify.app/' github='https://github.com/Yancap/projeto-login-node-react' setLink={setLink}/>
+          <Program tech='ts tailwindcss nextjs' setTech={setTech} icon={spotify} text='Clone do Spotify' path='https://e-spotify.netlify.app/' github='https://github.com/Yancap/projeto-spotify-com-tailwind' setLink={setLink}/>
           <Program tech='React Node css_js sql js ts css rest' setTech={setTech} icon={blog} text='Pagina de Artigos'  path='https://artech-blog.netlify.app/' github='https://github.com/Yancap/projeto-blog-client' setLink={setLink}/>
           <Program tech='React Node css_js sql js ts css rest' setTech={setTech} icon={ymoney} text='Controle de Finanças Pessoais' path='https://ymoney.netlify.app/' github='https://github.com/Yancap/projeto-controle-de-financas-server' setLink={setLink}/>
           <Program tech='python' setTech={setTech} icon={py} text='Sistema de Login com Python.py' github='https://github.com/Yancap/sistema-de-login-python' setLink={setLink}/>
